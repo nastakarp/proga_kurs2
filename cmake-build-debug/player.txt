@@ -1,0 +1,33 @@
+1, Kosarevsky Pyotr Ilyich, 1999-05-11, Dushanbe, Goalkeeper, Team member
+2, Kraikov Timur Viktorovich, 2001-05-02, Minsk, Goalkeeper, Team member
+3, Fedorov Artem Anatolyevich, 1984-12-16, Moscow, Goalkeeper, Team member
+4, Abazov Astemir Valeryevich, 1996-12-08, St. Petersburg, Defender, Team member
+5, Gudkov Yan Mikhailovich, 2002-03-05, Saratov, Defender, Team member
+6, Dudiev Aslan Muratovich, 1990-06-15, Dushanbe, Defender, Team member
+7, Evdokimov Andrey Vladimirovich, 1999-03-09, Minsk, Defender, Team member
+8, Mankov Nikita Sergeyevich, 2000-06-20, Moscow, Defender, Team member
+9, Molodtsov Artem Igorevich, 1990-10-08, St. Petersburg, Defender, Team member
+10, Ozmanov David Tengizovich, 1995-01-31, Saratov, Defender, Team member
+11, Pliev Zaurbek Igorevich, 1991-09-27, Dushanbe, Defender, Team member
+12, Serikov Ilya Andreevich, 1995-03-04, Minsk, Defender, Team member
+13, Tolstopyatov Nikolay Valeryevich, 2002-05-12, Moscow, Defender, Team member
+14, Azarov Vladimir Alexeevich, 1994-03-19, St. Petersburg, Midfielder, Team member
+15, Babaev Vladlen Igorevich, 1996-10-16, Saratov, Midfielder, Team member
+16, Batyrev Amir Renatovich, 2002-03-11, Dushanbe, Midfielder, Team member
+17, Zabelin Pavel Vitalyevich, 1995-06-30, Minsk, Midfielder, Team member
+18, Kamyshov Ilya Vladislavovich, 1997-07-13, Moscow, Midfielder, Team member
+19, Kozlovsky Nikita Andreevich, 1997-05-11, St. Petersburg, Midfielder, Team member
+20, Leontiev Igor Olegovich, 1994-03-18, Saratov, Midfielder, Team member
+21, Maltsev Mikhail Dmitrievich, 2001-02-14, Dushanbe, Midfielder, Team member
+22, Samko Vladislav Igorevich, 2002-01-03, Minsk, Midfielder, Team member
+23, Sasin Dmitry Andreevich, 1996-08-21, Moscow, Midfielder, Team member
+24, Ivakhnov Matvey Andreevich, 2003-07-21, St. Petersburg, Forward, Team member
+25, Maximenko Artem Sergeyevich, 1998-05-27, Saratov, Forward, Team member
+26, Morozov Vladislav Markovich, 2001-07-30, Dushanbe, Forward, Team member
+27, Pogosyan Albert Azatovich, 2002-11-10, Minsk, Forward, Team member
+28, Weber Dmitry Grigorievich, 1995-08-20, Moscow, Midfielder, Candidate
+29, Ezhkov Danila Andreevich, 1987-04-12, St. Petersburg, Forward, Candidate
+30, Kazantsev Danil Antonovich, 2000-11-30, Saratov, Midfielder, Candidate
+31, Karaev Maxim Irizalievich, 1992-09-05, Dushanbe, Defender, Candidate
+32, Tursunov Igor Erkindzhanovich, 1983-12-25, Minsk, Forward, Candidate
+33, Yugaldin Dmitry Ilyich, 1998-06-15, Moscow, Midfielder, Candidate

@@ -1,0 +1,16 @@
+# ninja log v5
+10	148	7369059952134674	build.ninja	138e62e958c59c1f
+1633	1868	1715180036933013476	untitled	d8efe18a2ee82eb6
+28	188	7369060256902400	CMakeFiles/untitled.dir/model/node/IntNode.cpp.obj	d024795025b1d5e8
+45	702	7369060262025834	CMakeFiles/untitled.dir/model/list/IntList.cpp.obj	5cffdb3136d39159
+62	754	7369060262491071	CMakeFiles/untitled.dir/model/node/TeamStatNode.cpp.obj	ca9afa0944a5fb4f
+54	766	7369060262672774	CMakeFiles/untitled.dir/model/core/TeamStat.cpp.obj	30d300b47672b5c1
+11	777	7369060262743899	CMakeFiles/untitled.dir/Util.cpp.obj	3da4bca76d700df
+6	785	7369060262854548	CMakeFiles/untitled.dir/main.cpp.obj	45f394fb788503ce
+95	787	7369060262884553	CMakeFiles/untitled.dir/model/node/PlayerNode.cpp.obj	e612594694335b85
+69	787	7369060262884553	CMakeFiles/untitled.dir/model/list/TeamStatList.cpp.obj	452796fb91b90cb2
+19	789	7369060262924565	CMakeFiles/untitled.dir/model/list/StringList.cpp.obj	897dfd6a2f4928ea
+91	799	7369060263024581	CMakeFiles/untitled.dir/model/list/PlayerList.cpp.obj	8d2c12a6ce08975e
+86	800	7369060263034583	CMakeFiles/untitled.dir/model/core/Player.cpp.obj	5b91ba96bbe935da
+31	592	7369067609922811	CMakeFiles/untitled.dir/model/node/StringNode.cpp.obj	6a1f23227e446e30
+593	918	7369067612944065	untitled.exe	82a56ecb7db24c6f
