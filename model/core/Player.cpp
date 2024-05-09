@@ -10,12 +10,21 @@ Player::Player(
 
 Player::~Player() = default;
 
+void Player::appendTeamStat(const TeamStat& value) {
+    this->statList.appendNode(value);
+    commonPlayedMatches = value.playedMatches;      // Сыгранные матчи
+    commonGoalsScored = value.goalsScored;          // Забитые голы
+    commonGoalsConceded = value.goalsConceded;      // Пропущенные голы
+    commonAssists = value.assists;                  // Голевые передачи
+}
+
 std::ostream &operator<<(std::ostream &os, const Player &player) {
     os << player.idPlayer << " ";
     os << *(player.name) << " ";
     os << *(player.city) << " ";
     os << *(player.position) << " ";
     os << *(player.status) << " ";
+    os << player.commonPlayedMatches << " ";
     return os;
 }
 

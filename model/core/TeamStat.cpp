@@ -15,7 +15,7 @@ TeamStat::~TeamStat() {
 }
 
 std::ostream &operator<<(std::ostream &os, const TeamStat &stat) {
-    os << stat.teamName << " " << stat.playedMatches << " " << stat.goalsScored << " " << stat.goalsConceded << " "
+    os << *stat.teamName << " " << stat.playedMatches << " " << stat.goalsScored << " " << stat.goalsConceded << " "
        << stat.assists;
     return os;
 }

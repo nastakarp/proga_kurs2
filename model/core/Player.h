@@ -1,3 +1,7 @@
+//
+// Created by Анастасия on 01.05.2024.
+//
+
 #ifndef PROGA_KURS_PLAYER_H
 #define PROGA_KURS_PLAYER_H
 
@@ -13,6 +17,13 @@ struct Player {
     char **position;
     char **status;
     TeamStatList statList;
+
+    int commonPlayedMatches = 0;      // Сыгранные матчи
+    int commonGoalsScored = 0;        // Забитые голы
+    int commonGoalsConceded = 0;      // Пропущенные голы
+    int commonAssists = 0;            // Голевые передачи
+
+    void appendTeamStat(const TeamStat& value);
 
     ~Player();
 

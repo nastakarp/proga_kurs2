@@ -46,10 +46,38 @@ int main() {
         Player player = Player(id, &nameNode->data, &cityNode->data, &positionNode->data, &statusNode->data);
         playerList.appendNode(player);
     }
-
-    cout << endl;
-    cout << playerList << endl;
-
     player_input.close();
+
+
+    std::ifstream team_input("team.txt");
+    if (!team_input.is_open()) {
+        std::cerr << "Failed to open the file." << std::endl;
+        return 0;
+    }
+
+    StringList teamNameList;
+
+    while (!team_input.eof()) {
+        int playerId = charToInt(readUntilComma(team_input));
+        char *teamName = readUntilComma(team_input);
+        int playedMatches = charToInt(readUntilComma(team_input));      // Сыгранные матчи
+        int goalsScored = charToInt(readUntilComma(team_input));        // Забитые голы
+        int goalsConceded = charToInt(readUntilComma(team_input));      // Пропущенные голы
+        int assists = charToInt(readUntilComma(team_input));            // Голевые передачи
+
+        auto teamNameNode = teamNameList.append(teamName);
+        //cout << teamName << endl;
+
+        TeamStat teamStat(&teamNameNode->data, playedMatches, goalsScored, goalsConceded, assists);
+        cout<<teamStat<<endl;
+        Player *player = playerList.findById(playerId);
+        if (player != nullptr) {
+            player->appendTeamStat(teamStat);
+        }
+
+    }
+
+    //cout << playerList << endl;
+
     return 0;
 }
