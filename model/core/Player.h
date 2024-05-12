@@ -9,7 +9,8 @@
 
 struct Player {
 
-    Player(int id, char **playerName, int year, char **playerCity, char **playerPosition, char **playerStatus);
+
+    Player(int id, char **playerName, int playerYear, char **playerCity, char **playerPosition, char **playerStatus);
 
     int idPlayer;
     char **name;
@@ -18,7 +19,7 @@ struct Player {
     char **position;
     char **status;
 
-    TeamStatList statList;
+    TeamStatList *statList;
 
     int commonPlayedMatches = 0;      // Сыгранные матчи
     int commonGoalsScored = 0;        // Забитые голы

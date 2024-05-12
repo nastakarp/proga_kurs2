@@ -71,10 +71,10 @@ void printPlayersGroupedByPositionAndAgeCategory(StringList *positionList, IntLi
 }
 
 bool playedInTeam(const Player &player, const char *teamName) {
-    return strcmp(*(player.statList.head->data.teamName), teamName) == 0;
+    return strcmp(*(player.statList->head->data.teamName), teamName) == 0;
 }
 
-// Функция для вывода списка команд с их игроками и кандидатами
+//2 список игроков и кандидатов, которые играли ранее в одних командах
 void printPlayersInTeams(PlayerList *playerList, StringList *teamNameList) {
     std::ofstream outputFile("output2.txt");
     if (!outputFile.is_open()) {
@@ -99,7 +99,6 @@ void printPlayersInTeams(PlayerList *playerList, StringList *teamNameList) {
 
     outputFile.close();
 }
-
 
 // Функция для сравнения игроков по общему числу игр
 bool compareByPlayedMatches(const Player &player1, const Player &player2) {
@@ -166,8 +165,12 @@ void swapPlayerNode(PlayerNode *playerNode, PlayerNode *playerNode2) {
     auto tempAssists = playerNode->data.commonAssists;
     playerNode->data.commonAssists = playerNode2->data.commonAssists;
     playerNode2->data.commonAssists = tempAssists;
-}
 
+    // Обмен статистики команд
+    auto tempStatList = playerNode->data.statList;
+    playerNode->data.statList = playerNode2->data.statList;
+    playerNode2->data.statList = tempStatList;
+}
 
 void sortPlayers(PlayerList *playerList, bool (*compare)(const Player &player1, const Player &player2)) {
     if (!playerList || !playerList->head || !compare)
@@ -186,8 +189,7 @@ void sortPlayers(PlayerList *playerList, bool (*compare)(const Player &player1, 
     }
 }
 
-
-// Функция для вывода списка команд с их игроками и кандидатами
+//3 учетные карточки на каждого игрока, упорядоченные (отдельно) по общему числу игр, голов и голевых передач за все команды,
 void printPlayerCards(PlayerList *playerList) {
     std::ofstream outputFile("output3.txt");
     if (!outputFile.is_open()) {
@@ -291,7 +293,7 @@ int main() {
 
     }
 
-    cout << playerList << endl;
+    //cout << playerList << endl;
 
     //1 игроков, сгруппированные по позиции и возрастной категории
     printPlayersGroupedByPositionAndAgeCategory(&positionList, &dateOfBirthList, &playerList);
@@ -300,6 +302,7 @@ int main() {
     //3 учетные карточки на каждого игрока, упорядоченные (отдельно) по общему числу игр, голов и голевых передач за все команды,
     printPlayerCards(&playerList);
     //4 учетные карточки на каждого игрока команды, упорядоченные (отдельно) по общему числу игр, голов и голевых передач за команду
+    //printPlayerCardsByTeam(&playerList, &teamNameList);
 
     return 0;
 }

@@ -7,12 +7,15 @@ Player::Player(
         char **playerCity,
         char **playerPosition,
         char **playerStatus
-) : idPlayer(id), name(playerName), year(playerYear),city(playerCity), position(playerPosition), status(playerStatus) {}
+) : idPlayer(id), name(playerName), year(playerYear), city(playerCity), position(playerPosition), status(playerStatus) {
+    this->statList = new TeamStatList();
+}
+
 
 Player::~Player() = default;
 
 void Player::appendTeamStat(const TeamStat& value) {
-    this->statList.appendNode(value);
+    this->statList->appendNode(value);
     commonPlayedMatches += value.playedMatches;      // Сыгранные матчи
     commonGoalsScored += value.goalsScored;          // Забитые голы
     commonGoalsConceded += value.goalsConceded;      // Пропущенные голы
@@ -27,7 +30,7 @@ std::ostream &operator<<(std::ostream &os, const Player &player) {
     os << *(player.position) << " ";
     os << *(player.status) << " ";
     os << player.commonPlayedMatches << " ";
-    os << *player.statList.head->data.teamName << " ";
+    os << *player.statList->head->data.teamName << " ";
     return os;
 }
 
