@@ -225,6 +225,54 @@ void printPlayerCards(PlayerList *playerList) {
     outputFile.close();
 }
 
+//4 учетные карточки на каждого игрока команды, упорядоченные (отдельно) по общему числу игр, голов и голевых передач за команду
+void printPlayerCardsByTeam(PlayerList *playerList, StringList *teamNameList) {
+    if (!playerList || !playerList->head) {
+        std::cerr << "Player list is empty!" << std::endl;
+        return;
+    }
+
+    std::ofstream outputFile("output4.txt");
+    if (!outputFile.is_open()) {
+        std::cerr << "Unable to open output file" << std::endl;
+        return;
+    }
+
+    int nameWidth = 35;
+    int size = 15;
+
+    // Сортировка игроков по общему числу сыгранных матчей за команду
+    sortPlayers(playerList, compareByPlayedMatches);
+
+    auto teamNameNode = teamNameList->head;
+    while (teamNameNode != nullptr) {
+        // Вывод учетных карточек игроков по команде
+
+        outputFile << "Player Cards for Team: " << teamNameNode->data << std::endl;
+        outputFile << std::left << std::setw(nameWidth) << "Player"
+                   << std::setw(size) << "Matches"
+                   << std::setw(size) << "GoalsScored"
+                   << std::setw(size) << "GoalsConceded"
+                   << std::setw(size) << "Assists" << std::endl;
+
+
+        PlayerNode *current = playerList->head;
+        while (current != nullptr) {
+            if (playedInTeam(current->data, teamNameNode->data)) {
+                outputFile << std::left << std::setw(nameWidth) << *(current->data.name)
+                           << std::setw(size) << current->data.commonPlayedMatches
+                           << std::setw(size) << current->data.commonGoalsScored
+                           << std::setw(size) << current->data.commonGoalsConceded
+                           << std::setw(size) << current->data.commonAssists << std::endl;
+            }
+            current = current->next;
+        }
+        teamNameNode = teamNameNode->next;
+        outputFile << "--------------------------------------" << std::endl;
+    }
+    outputFile.close();
+}
+
 int main() {
     setlocale(LC_ALL, "Russian");
     ifstream player_input("player.txt", std::ios::in);
@@ -302,7 +350,7 @@ int main() {
     //3 учетные карточки на каждого игрока, упорядоченные (отдельно) по общему числу игр, голов и голевых передач за все команды,
     printPlayerCards(&playerList);
     //4 учетные карточки на каждого игрока команды, упорядоченные (отдельно) по общему числу игр, голов и голевых передач за команду
-    //printPlayerCardsByTeam(&playerList, &teamNameList);
+    printPlayerCardsByTeam(&playerList, &teamNameList);
 
     return 0;
 }
