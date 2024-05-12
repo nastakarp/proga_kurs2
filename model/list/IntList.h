@@ -4,12 +4,11 @@
 #include "../node/IntNode.h"
 
 // Класс для списка int
-class IntList {
-private:
-    IntNode* head; // Указатель на начало списка
-    IntNode* tail; // Указатель на конец списка
+struct IntList {
 
-public:
+    IntNode *head; // Указатель на начало списка
+    IntNode *tail; // Указатель на конец списка
+
     // Конструктор по умолчанию
     IntList();
 
@@ -20,7 +19,7 @@ public:
     void append(int value);
 
     // Перегрузка оператора вывода для вывода списка в поток
-    friend std::ostream& operator<<(std::ostream& os, const IntList& list);
+    friend std::ostream &operator<<(std::ostream &os, const IntList &list);
 };
 
 #endif //UNTITLED_INTLIST_H

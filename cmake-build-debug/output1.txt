@@ -1,0 +1,35 @@
+Position       Year    Player                   
+------------------------------------------------
+Defender       1990    Dudiev Aslan Muratovich  
+Defender       1990    Molodtsov Artem Igorevich
+Defender       1991    Pliev Zaurbek Igorevich  
+Defender       1992    Karaev Maxim Irizalievich
+Defender       1995    Ozmanov David Tengizovich
+Defender       1995    Serikov Ilya Andreevich  
+Defender       1996    Abazov Astemir Valeryevich
+Defender       1999    Evdokimov Andrey Vladimirovich
+Defender       2000    Mankov Nikita Sergeyevich
+Defender       2002    Gudkov Yan Mikhailovich  
+Defender       2002    Tolstopyatov Nikolay Valeryevich
+Forward        1983    Tursunov Igor Erkindzhanovich
+Forward        1987    Ezhkov Danila Andreevich 
+Forward        1998    Maximenko Artem Sergeyevich
+Forward        2001    Morozov Vladislav Markovich
+Forward        2002    Pogosyan Albert Azatovich
+Forward        2003    Ivakhnov Matvey Andreevich
+Goalkeeper     1984    Fedorov Artem Anatolyevich
+Goalkeeper     1999    Kosarevsky Pyotr Ilyich  
+Goalkeeper     2001    Kraikov Timur Viktorovich
+Midfielder     1994    Azarov Vladimir Alexeevich
+Midfielder     1994    Leontiev Igor Olegovich  
+Midfielder     1995    Zabelin Pavel Vitalyevich
+Midfielder     1995    Weber Dmitry Grigorievich
+Midfielder     1996    Babaev Vladlen Igorevich 
+Midfielder     1996    Sasin Dmitry Andreevich  
+Midfielder     1997    Kamyshov Ilya Vladislavovich
+Midfielder     1997    Kozlovsky Nikita Andreevich
+Midfielder     1998    Yugaldin Dmitry Ilyich   
+Midfielder     2000    Kazantsev Danil Antonovich
+Midfielder     2001    Maltsev Mikhail Dmitrievich
+Midfielder     2002    Batyrev Amir Renatovich  
+Midfielder     2002    Samko Vladislav Igorevich

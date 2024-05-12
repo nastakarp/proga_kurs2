@@ -4,12 +4,10 @@
 #include "../node/StringNode.h"
 
 // Класс для списка char*
-class StringList {
-private:
+struct StringList {
     StringNode* head; // Указатель на начало списка
     StringNode* tail; // Указатель на конец списка
 
-public:
     // Конструктор по умолчанию
     StringList();
 
