@@ -10,21 +10,14 @@
 
 using namespace std;
 
-int main() {
-    setlocale(LC_ALL, "Russian");
+void
+readPlayersFromFile(PlayerList &playerList, StringList &fullnameList, IntList &dateOfBirthList, StringList &cityList,
+                    StringList &positionList, StringList &statusList) {
     ifstream player_input("player.txt", std::ios::in);
     if (!player_input.is_open()) {
         std::cerr << "Failed to open the file." << std::endl;
-        return 1;
+        return;
     }
-
-    StringList fullnameList;
-    IntList dateOfBirthList;
-    StringList cityList;
-    StringList positionList;
-    StringList statusList;
-
-    PlayerList playerList;
 
     while (!player_input.eof()) {
         int id = charToInt(readUntilComma(player_input));
@@ -49,15 +42,15 @@ int main() {
     }
     player_input.close();
 
+}
+
+void readTeamsFromFile(PlayerList &playerList, StringList &teamNameList) {
 
     std::ifstream team_input("team.txt");
     if (!team_input.is_open()) {
         std::cerr << "Failed to open the file." << std::endl;
-        return 0;
+        return;
     }
-
-    StringList teamNameList;
-
     while (!team_input.eof()) {
         int playerId = charToInt(readUntilComma(team_input));
         char *teamName = readUntilComma(team_input);
@@ -77,9 +70,9 @@ int main() {
         }
 
     }
+}
 
-    //cout << playerList << endl;
-
+void menu(PlayerList &playerList, StringList &positionList, StringList &teamNameList, IntList &dateOfBirthList) {
     int choice;
     bool exitMenu = false;
 
@@ -122,7 +115,7 @@ int main() {
                     std::cout << "5. [Back to main menu]" << std::endl;
                     std::cout << "Enter your choice: ";
                     std::cin >> choice3;
-                    printPlayerCards(&playerList,choice3);
+                    printPlayerCards(&playerList, choice3);
                 } while (choice3 != 5); // Повторять до тех пор, пока пользователь не выберет "Вернуться в главное меню"
                 break;
             case 4:
@@ -137,7 +130,7 @@ int main() {
                     std::cout << "5. [Back to main menu]" << std::endl;
                     std::cout << "Enter your choice: ";
                     std::cin >> choice4;
-                    printPlayerCardsByTeam(&playerList, &teamNameList,choice4);
+                    printPlayerCardsByTeam(&playerList, &teamNameList, choice4);
                 } while (choice4 != 5); // Повторять до тех пор, пока пользователь не выберет "Вернуться в главное меню"
                 break;
                 //printPlayerCardsByTeam(&playerList, &teamNameList);
@@ -149,5 +142,23 @@ int main() {
                 break;
         }
     }
+}
+
+int main() {
+
+    StringList fullnameList;
+    IntList dateOfBirthList;
+    StringList cityList;
+    StringList positionList;
+    StringList statusList;
+
+    PlayerList playerList;
+
+    StringList teamNameList;
+
+    readPlayersFromFile(playerList, fullnameList, dateOfBirthList, cityList, positionList, statusList);
+    readTeamsFromFile(playerList, teamNameList);
+    menu(playerList, positionList, teamNameList, dateOfBirthList);
+
     return 0;
 }
