@@ -22,8 +22,8 @@ Kamyshov Ilya Vladislavovich       85             52             36             
 Fedorov Artem Anatolyevich         60             12             30             20             
 Yugaldin Dmitry Ilyich             45             25             20             18             
 Sasin Dmitry Andreevich            42             30             22             17             
-Mankov Nikita Sergeyevich          35             20             12             8              
 Weber Dmitry Grigorievich          35             18             15             10             
+Mankov Nikita Sergeyevich          35             20             12             8              
 Tolstopyatov Nikolay Valeryevich   29             8              15             6              
 --------------------------------------
 Player Cards for Team: Torpedo

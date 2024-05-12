@@ -17,9 +17,9 @@ void printPlayersGroupedByPositionAndAgeCategory(StringList *positionList, IntLi
 void printPlayersInTeams(PlayerList *playerList, StringList *teamNameList);
 
 //3 учетные карточки на каждого игрока, упорядоченные (отдельно) по общему числу игр, голов и голевых передач за все команды,
-void printPlayerCards(PlayerList *playerList,int choice);
+void printPlayerCards(PlayerList *playerList, int choice);
 
 //4 учетные карточки на каждого игрока команды, упорядоченные (отдельно) по общему числу игр, голов и голевых передач за команду
-void printPlayerCardsByTeam(PlayerList *playerList, StringList *teamNameList) ;
+void printPlayerCardsByTeam(PlayerList *playerList, StringList *teamNameList, int choice);
 
 #endif //UNTITLED_FUNCTIONAL_H

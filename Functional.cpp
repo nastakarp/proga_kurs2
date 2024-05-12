@@ -245,7 +245,7 @@ void printPlayerCards(PlayerList *playerList, int choice) {
 }
 
 //4 учетные карточки на каждого игрока команды, упорядоченные (отдельно) по общему числу игр, голов и голевых передач за команду
-void printPlayerCardsByTeam(PlayerList *playerList, StringList *teamNameList) {
+void printPlayerCardsByTeam(PlayerList *playerList, StringList *teamNameList,int choice) {
     if (!playerList || !playerList->head) {
         std::cerr << "Player list is empty!" << std::endl;
         return;
@@ -260,8 +260,24 @@ void printPlayerCardsByTeam(PlayerList *playerList, StringList *teamNameList) {
     int nameWidth = 35;
     int size = 15;
 
-    // Сортировка игроков по общему числу сыгранных матчей за команду
-    sortPlayers(playerList, compareByPlayedMatches);
+    // Сортировка игроков
+    switch (choice) {
+        case 1:
+            sortPlayers(playerList, compareByPlayedMatches);
+            break;
+        case 2:
+            sortPlayers(playerList, compareByGoalsScored);
+            break;
+        case 3:
+            sortPlayers(playerList, compareByGoalsConceded);
+            break;
+        case 4:
+            sortPlayers(playerList, compareByAssists);
+            break;
+        default:
+            std::cout << "Wrong choice. Try again" << std::endl;
+            break;
+    }
 
     auto teamNameNode = teamNameList->head;
     while (teamNameNode != nullptr) {
