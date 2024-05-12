@@ -111,7 +111,19 @@ int main() {
                 printPlayersInTeams(&playerList, &teamNameList);
                 break;
             case 3:
-                printPlayerCards(&playerList);
+                int subChoice;
+                do {
+                    // Отобразить опции для выбора
+                    std::cout << "1. comparison of players by total number of matches" << std::endl;
+                    std::cout << "2. comparison of players by total number of goals scored" << std::endl;
+                    std::cout << "3. comparison of players by the total number of goals conceded" << std::endl;
+                    std::cout << "4. comparison of players by total number of assists" << std::endl;
+
+                    std::cout << "5. [Back to main menu]" << std::endl;
+                    std::cout << "Enter your choice: ";
+                    std::cin >> subChoice;
+                    printPlayerCards(&playerList,subChoice);
+                } while (subChoice != 5); // Повторять до тех пор, пока пользователь не выберет "Вернуться в главное меню"
                 break;
             case 4:
                 printPlayerCardsByTeam(&playerList, &teamNameList);

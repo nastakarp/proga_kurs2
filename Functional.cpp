@@ -80,7 +80,6 @@ void printPlayersInTeams(PlayerList *playerList, StringList *teamNameList) {
         return;
     }
     auto teamNameNode = teamNameList->head;
-    //TeamNode *currentTeamNode = teamList->head;
     while (teamNameNode != nullptr) {
         outputFile << "Team: " << teamNameNode->data << std::endl;
         // Вывод игроков команды
@@ -106,6 +105,11 @@ bool compareByPlayedMatches(const Player &player1, const Player &player2) {
 // Функция для сравнения игроков по общему числу забитых голов
 bool compareByGoalsScored(const Player &player1, const Player &player2) {
     return player1.commonGoalsScored > player2.commonGoalsScored;
+}
+
+// Функция для сравнения игроков по общему числу пропущенных голов
+bool compareByGoalsConceded(const Player &player1, const Player &player2) {
+    return player1.commonGoalsConceded > player2.commonGoalsConceded;
 }
 
 // Функция для сравнения игроков по общему числу голевых передач
@@ -188,7 +192,7 @@ void sortPlayers(PlayerList *playerList, bool (*compare)(const Player &player1, 
 }
 
 //3 учетные карточки на каждого игрока, упорядоченные (отдельно) по общему числу игр, голов и голевых передач за все команды,
-void printPlayerCards(PlayerList *playerList) {
+void printPlayerCards(PlayerList *playerList, int choice) {
     std::ofstream outputFile("output3.txt");
     if (!outputFile.is_open()) {
         std::cerr << "Unable to open output file";
@@ -205,8 +209,25 @@ void printPlayerCards(PlayerList *playerList) {
                << std::setw(size) << "Assists" << std::endl;
     outputFile << std::setfill('-') << std::setw(nameWidth + 4 * size) << "" << std::setfill(' ') << std::endl;
 
-    // Сортировка игроков по общему числу игр
-    sortPlayers(playerList, compareByAssists);
+    // Сортировка игроков
+
+    switch (choice) {
+        case 1:
+            sortPlayers(playerList, compareByPlayedMatches);
+            break;
+        case 2:
+            sortPlayers(playerList, compareByGoalsScored);
+            break;
+        case 3:
+            sortPlayers(playerList, compareByGoalsConceded);
+            break;
+        case 4:
+            sortPlayers(playerList, compareByAssists);
+            break;
+        default:
+            std::cout << "Wrong choice. Try again" << std::endl;
+            break;
+    }
 
     // Вывод учетных карточек игроков
     PlayerNode *current = playerList->head;

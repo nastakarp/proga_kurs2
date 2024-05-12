@@ -4,8 +4,8 @@ Defender       1990    Dudiev Aslan Muratovich
                1990    Molodtsov Artem Igorevich
                1991    Pliev Zaurbek Igorevich  
                1992    Karaev Maxim Irizalievich
-               1995    Ozmanov David Tengizovich
                1995    Serikov Ilya Andreevich  
+               1995    Ozmanov David Tengizovich
                1996    Abazov Astemir Valeryevich
                1999    Evdokimov Andrey Vladimirovich
                2000    Mankov Nikita Sergeyevich
@@ -31,5 +31,5 @@ Midfielder     1994    Azarov Vladimir Alexeevich
                1998    Yugaldin Dmitry Ilyich   
                2000    Kazantsev Danil Antonovich
                2001    Maltsev Mikhail Dmitrievich
-               2002    Batyrev Amir Renatovich  
                2002    Samko Vladislav Igorevich
+               2002    Batyrev Amir Renatovich  
