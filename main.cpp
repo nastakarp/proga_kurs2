@@ -70,12 +70,12 @@ void printPlayersGroupedByPositionAndAgeCategory(StringList *positionList, IntLi
     outputFile.close();
 }
 
-bool playedInTeam(const Player& player, const char* teamName) {
+bool playedInTeam(const Player &player, const char *teamName) {
     return strcmp(*(player.statList.head->data.teamName), teamName) == 0;
 }
 
 // Функция для вывода списка команд с их игроками и кандидатами
-void printPlayersInTeams(PlayerList *playerList,StringList *teamNameList) {
+void printPlayersInTeams(PlayerList *playerList, StringList *teamNameList) {
     std::ofstream outputFile("output2.txt");
     if (!outputFile.is_open()) {
         std::cerr << "Unable to open output file";
@@ -93,13 +93,44 @@ void printPlayersInTeams(PlayerList *playerList,StringList *teamNameList) {
             }
             currentPlayerNode = currentPlayerNode->next;
         }
-        outputFile << "-------------------" << std::endl<< std::endl;
+        outputFile << "-------------------" << std::endl << std::endl;
         teamNameNode = teamNameNode->next;
     }
 
     outputFile.close();
 }
 
+//3 учетные карточки на каждого игрока, упорядоченные (отдельно) по общему числу игр, голов и голевых передач за все команды,
+void printPlayerCards(PlayerList *playerList) {
+    std::ofstream outputFile("output3.txt");
+    if (!outputFile.is_open()) {
+        std::cerr << "Unable to open output file";
+        return;
+    }
+
+    // Определим ширину каждого столбца
+    int nameWidth = 35;
+    int size = 15;
+
+    // Заголовки таблицы
+    outputFile << std::left << std::setw(nameWidth) << "Player" << std::setw(size) << "Matches"
+               << std::setw(size) << "Goals Scored" << std::setw(size) << "Goals Conceded"
+               << std::setw(size) << "Assists" << std::endl;
+    outputFile << std::setfill('-') << std::setw(nameWidth + 4 * size) << "" << std::setfill(' ') << std::endl;
+
+    auto playerNode = playerList->head;
+    while (playerNode != nullptr) {
+        outputFile << std::left << std::setw(nameWidth) << *playerNode->data.name
+                   << std::setw(size) << playerNode->data.commonPlayedMatches
+                   << std::setw(size) << playerNode->data.commonGoalsScored
+                   << std::setw(size) << playerNode->data.commonGoalsConceded
+                   << std::setw(size) << playerNode->data.commonAssists << std::endl;
+        playerNode = playerNode->next;
+    }
+
+    outputFile << std::endl;
+    outputFile.close();
+}
 
 
 int main() {
@@ -175,9 +206,9 @@ int main() {
     //1 игроков, сгруппированные по позиции и возрастной категории
     printPlayersGroupedByPositionAndAgeCategory(&positionList, &dateOfBirthList, &playerList);
     //2 список игроков и кандидатов, которые играли ранее в одних командах
-    printPlayersInTeams(&playerList,&teamNameList);
+    printPlayersInTeams(&playerList, &teamNameList);
     //3 учетные карточки на каждого игрока, упорядоченные (отдельно) по общему числу игр, голов и голевых передач за все команды,
-
+    printPlayerCards(&playerList);
     //4 учетные карточки на каждого игрока команды, упорядоченные (отдельно) по общему числу игр, голов и голевых передач за команду
 
     return 0;
