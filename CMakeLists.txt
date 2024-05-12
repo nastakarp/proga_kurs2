@@ -19,4 +19,6 @@ add_executable(untitled main.cpp
         model/list/TeamStatList.cpp
         model/core/Player.cpp
         model/list/PlayerList.cpp
-        model/node/PlayerNode.cpp)
+        model/node/PlayerNode.cpp
+        Functional.cpp
+        Functional.h)
