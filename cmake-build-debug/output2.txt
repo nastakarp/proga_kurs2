@@ -1,0 +1,48 @@
+Team: Istiklol
+Kosarevsky Pyotr Ilyich
+Ozmanov David Tengizovich
+Babaev Vladlen Igorevich
+Leontiev Igor Olegovich
+Maximenko Artem Sergeyevich
+Kazantsev Danil Antonovich
+-------------------
+
+Team: Sokol
+Gudkov Yan Mikhailovich
+Molodtsov Artem Igorevich
+Azarov Vladimir Alexeevich
+Kozlovsky Nikita Andreevich
+Ivakhnov Matvey Andreevich
+Ezhkov Danila Andreevich
+-------------------
+
+Team: Spartak
+Fedorov Artem Anatolyevich
+Mankov Nikita Sergeyevich
+Tolstopyatov Nikolay Valeryevich
+Kamyshov Ilya Vladislavovich
+Sasin Dmitry Andreevich
+Weber Dmitry Grigorievich
+Yugaldin Dmitry Ilyich
+-------------------
+
+Team: Torpedo
+Kraikov Timur Viktorovich
+Dudiev Aslan Muratovich
+Evdokimov Andrey Vladimirovich
+Serikov Ilya Andreevich
+Zabelin Pavel Vitalyevich
+Samko Vladislav Igorevich
+Pogosyan Albert Azatovich
+Tursunov Igor Erkindzhanovich
+-------------------
+
+Team: Zenit
+Abazov Astemir Valeryevich
+Pliev Zaurbek Igorevich
+Batyrev Amir Renatovich
+Maltsev Mikhail Dmitrievich
+Morozov Vladislav Markovich
+Karaev Maxim Irizalievich
+-------------------
+

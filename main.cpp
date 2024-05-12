@@ -70,6 +70,36 @@ void printPlayersGroupedByPositionAndAgeCategory(StringList *positionList, IntLi
     outputFile.close();
 }
 
+bool playedInTeam(const Player& player, const char* teamName) {
+    return strcmp(*(player.statList.head->data.teamName), teamName) == 0;
+}
+
+// Функция для вывода списка команд с их игроками и кандидатами
+void printPlayersInTeams(PlayerList *playerList,StringList *teamNameList) {
+    std::ofstream outputFile("output2.txt");
+    if (!outputFile.is_open()) {
+        std::cerr << "Unable to open output file";
+        return;
+    }
+    auto teamNameNode = teamNameList->head;
+    //TeamNode *currentTeamNode = teamList->head;
+    while (teamNameNode != nullptr) {
+        outputFile << "Team: " << teamNameNode->data << std::endl;
+        // Вывод игроков команды
+        PlayerNode *currentPlayerNode = playerList->head;
+        while (currentPlayerNode != nullptr) {
+            if (playedInTeam(currentPlayerNode->data, teamNameNode->data)) {
+                outputFile << *(currentPlayerNode->data.name) << std::endl;
+            }
+            currentPlayerNode = currentPlayerNode->next;
+        }
+        outputFile << "-------------------" << std::endl<< std::endl;
+        teamNameNode = teamNameNode->next;
+    }
+
+    outputFile.close();
+}
+
 
 
 int main() {
@@ -140,9 +170,15 @@ int main() {
 
     }
 
-    //cout << playerList << endl;
+    cout << playerList << endl;
 
     //1 игроков, сгруппированные по позиции и возрастной категории
     printPlayersGroupedByPositionAndAgeCategory(&positionList, &dateOfBirthList, &playerList);
+    //2 список игроков и кандидатов, которые играли ранее в одних командах
+    printPlayersInTeams(&playerList,&teamNameList);
+    //3 учетные карточки на каждого игрока, упорядоченные (отдельно) по общему числу игр, голов и голевых передач за все команды,
+
+    //4 учетные карточки на каждого игрока команды, упорядоченные (отдельно) по общему числу игр, голов и голевых передач за команду
+
     return 0;
 }

@@ -27,6 +27,7 @@ std::ostream &operator<<(std::ostream &os, const Player &player) {
     os << *(player.position) << " ";
     os << *(player.status) << " ";
     os << player.commonPlayedMatches << " ";
+    os << *player.statList.head->data.teamName << " ";
     return os;
 }
 
