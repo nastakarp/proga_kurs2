@@ -100,7 +100,94 @@ void printPlayersInTeams(PlayerList *playerList, StringList *teamNameList) {
     outputFile.close();
 }
 
-//3 учетные карточки на каждого игрока, упорядоченные (отдельно) по общему числу игр, голов и голевых передач за все команды,
+
+// Функция для сравнения игроков по общему числу игр
+bool compareByPlayedMatches(const Player &player1, const Player &player2) {
+    return player1.commonPlayedMatches > player2.commonPlayedMatches;
+}
+
+// Функция для сравнения игроков по общему числу забитых голов
+bool compareByGoalsScored(const Player &player1, const Player &player2) {
+    return player1.commonGoalsScored > player2.commonGoalsScored;
+}
+
+// Функция для сравнения игроков по общему числу голевых передач
+bool compareByAssists(const Player &player1, const Player &player2) {
+    return player1.commonAssists > player2.commonAssists;
+}
+
+void swapPlayerNode(PlayerNode *playerNode, PlayerNode *playerNode2) {
+    // Обмен id игроков
+    auto tempId = playerNode->data.idPlayer;
+    playerNode->data.idPlayer = playerNode2->data.idPlayer;
+    playerNode2->data.idPlayer = tempId;
+
+    // Обмен имен игроков
+    auto tempName = playerNode->data.name;
+    playerNode->data.name = playerNode2->data.name;
+    playerNode2->data.name = tempName;
+
+    // Обмен года рождения
+    auto tempYear = playerNode->data.year;
+    playerNode->data.year = playerNode2->data.year;
+    playerNode2->data.year = tempYear;
+
+    // Обмен городов
+    auto tempCity = playerNode->data.city;
+    playerNode->data.city = playerNode2->data.city;
+    playerNode2->data.city = tempCity;
+
+    // Обмен позиций
+    auto tempPosition = playerNode->data.position;
+    playerNode->data.position = playerNode2->data.position;
+    playerNode2->data.position = tempPosition;
+
+    // Обмен статусов
+    auto tempStatus = playerNode->data.status;
+    playerNode->data.status = playerNode2->data.status;
+    playerNode2->data.status = tempStatus;
+
+    // Обмен сыгранных матчей
+    auto tempPlayedMatches = playerNode->data.commonPlayedMatches;
+    playerNode->data.commonPlayedMatches = playerNode2->data.commonPlayedMatches;
+    playerNode2->data.commonPlayedMatches = tempPlayedMatches;
+
+    // Обмен забитых голов
+    auto tempGoalsScored = playerNode->data.commonGoalsScored;
+    playerNode->data.commonGoalsScored = playerNode2->data.commonGoalsScored;
+    playerNode2->data.commonGoalsScored = tempGoalsScored;
+
+    // Обмен пропущенных голов
+    auto tempGoalsConceded = playerNode->data.commonGoalsConceded;
+    playerNode->data.commonGoalsConceded = playerNode2->data.commonGoalsConceded;
+    playerNode2->data.commonGoalsConceded = tempGoalsConceded;
+
+    // Обмен голевых передач
+    auto tempAssists = playerNode->data.commonAssists;
+    playerNode->data.commonAssists = playerNode2->data.commonAssists;
+    playerNode2->data.commonAssists = tempAssists;
+}
+
+
+void sortPlayers(PlayerList *playerList, bool (*compare)(const Player &player1, const Player &player2)) {
+    if (!playerList || !playerList->head || !compare)
+        return;
+
+    PlayerNode *current = playerList->head;
+    while (current != nullptr) {
+        PlayerNode *nextNode = current->next;
+        while (nextNode != nullptr) {
+            if (compare(nextNode->data, current->data)) {
+                swapPlayerNode(current, nextNode);
+            }
+            nextNode = nextNode->next;
+        }
+        current = current->next;
+    }
+}
+
+
+// Функция для вывода списка команд с их игроками и кандидатами
 void printPlayerCards(PlayerList *playerList) {
     std::ofstream outputFile("output3.txt");
     if (!outputFile.is_open()) {
@@ -118,20 +205,23 @@ void printPlayerCards(PlayerList *playerList) {
                << std::setw(size) << "Assists" << std::endl;
     outputFile << std::setfill('-') << std::setw(nameWidth + 4 * size) << "" << std::setfill(' ') << std::endl;
 
-    auto playerNode = playerList->head;
-    while (playerNode != nullptr) {
-        outputFile << std::left << std::setw(nameWidth) << *playerNode->data.name
-                   << std::setw(size) << playerNode->data.commonPlayedMatches
-                   << std::setw(size) << playerNode->data.commonGoalsScored
-                   << std::setw(size) << playerNode->data.commonGoalsConceded
-                   << std::setw(size) << playerNode->data.commonAssists << std::endl;
-        playerNode = playerNode->next;
+    // Сортировка игроков по общему числу игр
+    sortPlayers(playerList, compareByAssists);
+
+    // Вывод учетных карточек игроков
+    PlayerNode *current = playerList->head;
+    while (current != nullptr) {
+        outputFile << std::left << std::setw(nameWidth) << *(current->data.name)
+                   << std::setw(size) << current->data.commonPlayedMatches
+                   << std::setw(size) << current->data.commonGoalsScored
+                   << std::setw(size) << current->data.commonGoalsConceded
+                   << std::setw(size) << current->data.commonAssists << std::endl;
+        current = current->next;
     }
 
     outputFile << std::endl;
     outputFile.close();
 }
-
 
 int main() {
     setlocale(LC_ALL, "Russian");
