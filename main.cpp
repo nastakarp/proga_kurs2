@@ -10,6 +10,56 @@
 
 using namespace std;
 
+//1 игроков, сгруппированные по позиции и возрастной категории
+void
+printPlayersGroupedByPositionAndAgeCategory(StringList *positionList, IntList *dateOfBirthList,
+                                            PlayerList *playerList) {
+    std::ofstream outputFile("output1.txt");
+    if (!outputFile.is_open()) {
+        std::cerr << "Unable to open output file";
+        return;
+    }
+
+    auto positionNode = positionList->head;
+
+    // Определим ширину каждого столбца
+    int positionWidth = 15;
+    int yearWidth = 8;
+    int nameWidth = 25;
+
+    // Заголовки таблицы
+    outputFile << std::left << std::setw(positionWidth) << "Position" << std::setw(yearWidth) << "Year"
+               << std::setw(nameWidth) << "Player"
+               << std::endl;
+    outputFile << std::setfill('-') << std::setw(positionWidth + yearWidth + nameWidth) << "" << std::setfill(' ')
+               << std::endl;
+
+    while (positionNode != nullptr) {
+        auto dateOfBirthNode = dateOfBirthList->head;
+        while (dateOfBirthNode != nullptr) {
+
+            auto playerNode = playerList->head;
+            while (playerNode != nullptr) {
+                if ((*playerNode->data.position == positionNode->data) &&
+                    (dateOfBirthNode->data == playerNode->data.year)) {
+                    // Выводим данные игрока в виде строки таблицы
+                    outputFile << std::left << std::setw(positionWidth) << positionNode->data
+                               << std::setw(yearWidth) << dateOfBirthNode->data
+                               << std::setw(nameWidth) << *(playerNode->data.name) << std::endl;
+
+                }
+                playerNode = playerNode->next;
+            }
+            dateOfBirthNode = dateOfBirthNode->next;
+        }
+
+        positionNode = positionNode->next;
+    }
+
+    outputFile.close();
+}
+
+
 int main() {
     setlocale(LC_ALL, "Russian");
     ifstream player_input("player.txt", std::ios::in);
@@ -70,7 +120,7 @@ int main() {
         //cout << teamName << endl;
 
         TeamStat teamStat(&teamNameNode->data, playedMatches, goalsScored, goalsConceded, assists);
-        cout << teamStat << endl;
+        //cout << teamStat << endl;
         Player *player = playerList.findById(playerId);
         if (player != nullptr) {
             player->appendTeamStat(teamStat);
@@ -78,51 +128,9 @@ int main() {
 
     }
 
-    cout << playerList << endl;
+    //cout << playerList << endl;
 
     //1 игроков, сгруппированные по позиции и возрастной категории
-    std::ofstream outputFile("output1.txt");
-    if (!outputFile.is_open()) {
-        std::cerr << "Unable to open output file";
-        //return;
-    }
-
-    auto positionNode = positionList.head;
-
-    // Определим ширину каждого столбца
-    int positionWidth = 15;
-    int yearWidth = 8;
-    int nameWidth = 25;
-
-    // Заголовки таблицы
-    outputFile << std::left << std::setw(positionWidth) << "Position" << std::setw(yearWidth) << "Year"
-               << std::setw(nameWidth) << "Player"
-               << std::endl;
-    outputFile << std::setfill('-') << std::setw(positionWidth + yearWidth + nameWidth) << "" << std::setfill(' ')
-               << std::endl;
-
-    while (positionNode != nullptr) {
-        auto dateOfBirthNode = dateOfBirthList.head;
-        while (dateOfBirthNode != nullptr) {
-            bool flag = false;
-            auto playerNode = playerList.head;
-            while (playerNode != nullptr) {
-                if ((*playerNode->data.position == positionNode->data) &&
-                    (dateOfBirthNode->data == playerNode->data.year)) {
-                    // Выводим данные игрока в виде строки таблицы
-                    outputFile << std::left << std::setw(positionWidth) << positionNode->data
-                                << std::setw(yearWidth) << dateOfBirthNode->data
-                               << std::setw(nameWidth) << *(playerNode->data.name) << std::endl;
-                    flag = true;
-                }
-                playerNode = playerNode->next;
-            }
-            dateOfBirthNode = dateOfBirthNode->next;
-        }
-
-        positionNode = positionNode->next;
-    }
-
-    outputFile.close();
+    printPlayersGroupedByPositionAndAgeCategory(&positionList, &dateOfBirthList, &playerList);
     return 0;
 }
