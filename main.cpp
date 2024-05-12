@@ -11,9 +11,8 @@
 using namespace std;
 
 //1 игроков, сгруппированные по позиции и возрастной категории
-void
-printPlayersGroupedByPositionAndAgeCategory(StringList *positionList, IntList *dateOfBirthList,
-                                            PlayerList *playerList) {
+void printPlayersGroupedByPositionAndAgeCategory(StringList *positionList, IntList *dateOfBirthList,
+                                                 PlayerList *playerList) {
     std::ofstream outputFile("output1.txt");
     if (!outputFile.is_open()) {
         std::cerr << "Unable to open output file";
@@ -26,6 +25,9 @@ printPlayersGroupedByPositionAndAgeCategory(StringList *positionList, IntList *d
     int positionWidth = 15;
     int yearWidth = 8;
     int nameWidth = 25;
+
+    // Флаг для отслеживания, была ли уже выведена позиция
+    bool positionPrinted = false;
 
     // Заголовки таблицы
     outputFile << std::left << std::setw(positionWidth) << "Position" << std::setw(yearWidth) << "Year"
@@ -42,22 +44,32 @@ printPlayersGroupedByPositionAndAgeCategory(StringList *positionList, IntList *d
             while (playerNode != nullptr) {
                 if ((*playerNode->data.position == positionNode->data) &&
                     (dateOfBirthNode->data == playerNode->data.year)) {
-                    // Выводим данные игрока в виде строки таблицы
-                    outputFile << std::left << std::setw(positionWidth) << positionNode->data
-                               << std::setw(yearWidth) << dateOfBirthNode->data
-                               << std::setw(nameWidth) << *(playerNode->data.name) << std::endl;
-
+                    // Если позиция еще не была выведена, выводим ее
+                    if (!positionPrinted) {
+                        outputFile << std::left << std::setw(positionWidth) << positionNode->data
+                                   << std::setw(yearWidth) << dateOfBirthNode->data
+                                   << std::setw(nameWidth) << *(playerNode->data.name) << std::endl;
+                        positionPrinted = true;
+                    } else {
+                        // Выводим только данные игрока
+                        outputFile << std::left << std::setw(positionWidth) << ""
+                                   << std::setw(yearWidth) << dateOfBirthNode->data
+                                   << std::setw(nameWidth) << *(playerNode->data.name) << std::endl;
+                    }
                 }
                 playerNode = playerNode->next;
             }
             dateOfBirthNode = dateOfBirthNode->next;
         }
 
+        // Сбрасываем флаг для следующей позиции
+        positionPrinted = false;
         positionNode = positionNode->next;
     }
 
     outputFile.close();
 }
+
 
 
 int main() {
