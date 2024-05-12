@@ -80,14 +80,49 @@ int main() {
 
     //cout << playerList << endl;
 
-    //1 игроков, сгруппированные по позиции и возрастной категории
-    printPlayersGroupedByPositionAndAgeCategory(&positionList, &dateOfBirthList, &playerList);
-    //2 список игроков и кандидатов, которые играли ранее в одних командах
-    printPlayersInTeams(&playerList, &teamNameList);
-    //3 учетные карточки на каждого игрока, упорядоченные (отдельно) по общему числу игр, голов и голевых передач за все команды,
-    printPlayerCards(&playerList);
-    //4 учетные карточки на каждого игрока команды, упорядоченные (отдельно) по общему числу игр, голов и голевых передач за команду
-    printPlayerCardsByTeam(&playerList, &teamNameList);
+    int choice;
+    bool exitMenu = false;
 
+    while (!exitMenu) {
+        // Выводим меню
+        std::cout << "Select a function:" << std::endl;
+        //1 игроков, сгруппированные по позиции и возрастной категории
+        std::cout << "1. list of players grouped by position and age category" << std::endl;
+        //2 список игроков и кандидатов, которые играли ранее в одних командах
+        std::cout << "2. list of players and candidates who have previously played in the same teams" << std::endl;
+        //3 учетные карточки на каждого игрока, упорядоченные (отдельно) по общему числу игр, голов и голевых передач за все команды,
+        std::cout
+                << "3. scorecards for each player, ordered (separately) by the total number of games, goals and assists for all teams"
+                << std::endl;
+        //4 учетные карточки на каждого игрока команды, упорядоченные (отдельно) по общему числу игр, голов и голевых передач за команду
+        std::cout
+                << "4. registration cards for each player of the team, ordered (separately) by the total number of games, goals and assists for the team"
+                << std::endl;
+        std::cout << "5. exit" << std::endl;
+        std::cout << "Your choice: ";
+        std::cin >> choice;
+
+        // Обрабатываем выбор пользователя
+        switch (choice) {
+            case 1:
+                printPlayersGroupedByPositionAndAgeCategory(&positionList, &dateOfBirthList, &playerList);
+                break;
+            case 2:
+                printPlayersInTeams(&playerList, &teamNameList);
+                break;
+            case 3:
+                printPlayerCards(&playerList);
+                break;
+            case 4:
+                printPlayerCardsByTeam(&playerList, &teamNameList);
+                break;
+            case 5:
+                exitMenu = true;
+                break;
+            default:
+                std::cout << "Wrong choice. Try again" << std::endl;
+                break;
+        }
+    }
     return 0;
 }
