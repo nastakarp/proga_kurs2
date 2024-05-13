@@ -19,6 +19,8 @@ struct StringList {
 
     // Перегрузка оператора вывода для вывода списка в поток
     friend std::ostream& operator<<(std::ostream& os, const StringList& list);
+
+    void print(std::ofstream &output);
 };
 
 #endif //UNTITLED_STRINGLIST_H

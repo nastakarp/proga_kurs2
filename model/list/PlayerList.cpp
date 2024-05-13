@@ -18,7 +18,7 @@ PlayerList::~PlayerList() {
 }
 
 // Добавление узла в конец списка
-void PlayerList::appendNode(const Player& value) {
+void PlayerList::appendNode(const Player &value) {
 
     // Проверяем, существует ли уже такое значение в списке
     PlayerNode *current = head;
@@ -64,4 +64,47 @@ std::ostream &operator<<(std::ostream &os, const PlayerList &list) {
         current = current->next;
     }
     return os;
+}
+
+void PlayerList::printPlayer(const PlayerList &list) {
+    std::ofstream output("output_player.txt");
+    if (!output.is_open()) {
+        std::cerr << "Error: Unable to open output file." << std::endl;
+        return;
+    }
+    PlayerNode *current = list.head;
+    output << "Head NULL" << "\n";
+    output << "--------------------------------------" << std::endl;
+    output << " | /|\\" << "\n";
+    output << "\\|/ |" << "\n";
+    while (current != nullptr) {
+        output << "--------------------------------------" << std::endl;
+        output << "id:\t " << current->data.idPlayer << std::endl;
+        output << "name:\t ";
+        printString(output,*current->data.name);
+        output<<std::endl;
+        output << "year:\t " <<current->data.year << std::endl;
+        output << "city:\t ";
+        printString(output,*current->data.city);
+        output<<std::endl;
+        output << "position:\t ";
+        printString(output,*current->data.position);
+        output<<std::endl;
+        output << "status:\t ";
+        printString(output,*current->data.status);
+        output<<std::endl;
+        output << "teamName:\t ";
+        printString(output,*current->data.statList->head->data.teamName);
+        output<<std::endl;
+        output << "commonPlayedMatches:\t " <<current->data.commonPlayedMatches << std::endl;
+        output << "commonGoalsScored:\t " <<current->data.commonGoalsScored << std::endl;
+        output << "commonGoalsConceded:\t " <<current->data.commonGoalsConceded << std::endl;
+        output << "commonAssists:\t " <<current->data.commonAssists << std::endl;
+        output << "--------------------------------------" << std::endl;
+        output << " | /|\\" << "\n";
+        output << "\\|/ |" << "\n";
+        current = current->next;
+    }
+    output << "--------------------------------------" << std::endl;
+    output << "NULL Tail" << "\n";
 }

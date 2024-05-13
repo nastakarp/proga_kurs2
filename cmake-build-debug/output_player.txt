@@ -1,0 +1,501 @@
+Head NULL
+--------------------------------------
+ | /|\
+\|/ |
+--------------------------------------
+id:	 1
+name:	 Head —> Kosar->evsky-> Pyot->r Ily->ich -> NULL
+year:	 1999
+city:	 Head —> Dusha->nbe -> NULL
+position:	 Head —> Goalk->eeper -> NULL
+status:	 Head —> Team ->membe->r -> NULL
+teamName:	 Head —> Istik->lol -> NULL
+commonPlayedMatches:	 50
+commonGoalsScored:	 35
+commonGoalsConceded:	 20
+commonAssists:	 15
+--------------------------------------
+ | /|\
+\|/ |
+--------------------------------------
+id:	 2
+name:	 Head —> Kraik->ov Ti->mur V->iktor->ovich -> NULL
+year:	 2001
+city:	 Head —> Minsk -> NULL
+position:	 Head —> Goalk->eeper -> NULL
+status:	 Head —> Team ->membe->r -> NULL
+teamName:	 Head —> Torpe->do -> NULL
+commonPlayedMatches:	 30
+commonGoalsScored:	 2
+commonGoalsConceded:	 25
+commonAssists:	 5
+--------------------------------------
+ | /|\
+\|/ |
+--------------------------------------
+id:	 3
+name:	 Head —> Fedor->ov Ar->tem A->natol->yevic->h -> NULL
+year:	 1984
+city:	 Head —> Mosco->w -> NULL
+position:	 Head —> Goalk->eeper -> NULL
+status:	 Head —> Team ->membe->r -> NULL
+teamName:	 Head —> Spart->ak -> NULL
+commonPlayedMatches:	 60
+commonGoalsScored:	 12
+commonGoalsConceded:	 30
+commonAssists:	 20
+--------------------------------------
+ | /|\
+\|/ |
+--------------------------------------
+id:	 4
+name:	 Head —> Abazo->v Ast->emir ->Valer->yevic->h -> NULL
+year:	 1996
+city:	 Head —> St. P->eters->burg -> NULL
+position:	 Head —> Defen->der -> NULL
+status:	 Head —> Team ->membe->r -> NULL
+teamName:	 Head —> Zenit -> NULL
+commonPlayedMatches:	 40
+commonGoalsScored:	 0
+commonGoalsConceded:	 35
+commonAssists:	 2
+--------------------------------------
+ | /|\
+\|/ |
+--------------------------------------
+id:	 5
+name:	 Head —> Gudko->v Yan-> Mikh->ailov->ich -> NULL
+year:	 2002
+city:	 Head —> Sarat->ov -> NULL
+position:	 Head —> Defen->der -> NULL
+status:	 Head —> Team ->membe->r -> NULL
+teamName:	 Head —> Sokol -> NULL
+commonPlayedMatches:	 60
+commonGoalsScored:	 36
+commonGoalsConceded:	 25
+commonAssists:	 15
+--------------------------------------
+ | /|\
+\|/ |
+--------------------------------------
+id:	 6
+name:	 Head —> Dudie->v Asl->an Mu->ratov->ich -> NULL
+year:	 1990
+city:	 Head —> Dusha->nbe -> NULL
+position:	 Head —> Defen->der -> NULL
+status:	 Head —> Team ->membe->r -> NULL
+teamName:	 Head —> Torpe->do -> NULL
+commonPlayedMatches:	 80
+commonGoalsScored:	 23
+commonGoalsConceded:	 35
+commonAssists:	 19
+--------------------------------------
+ | /|\
+\|/ |
+--------------------------------------
+id:	 7
+name:	 Head —> Evdok->imov ->Andre->y Vla->dimir->ovich -> NULL
+year:	 1999
+city:	 Head —> Minsk -> NULL
+position:	 Head —> Defen->der -> NULL
+status:	 Head —> Team ->membe->r -> NULL
+teamName:	 Head —> Torpe->do -> NULL
+commonPlayedMatches:	 20
+commonGoalsScored:	 3
+commonGoalsConceded:	 18
+commonAssists:	 4
+--------------------------------------
+ | /|\
+\|/ |
+--------------------------------------
+id:	 8
+name:	 Head —> Manko->v Nik->ita S->ergey->evich -> NULL
+year:	 2000
+city:	 Head —> Mosco->w -> NULL
+position:	 Head —> Defen->der -> NULL
+status:	 Head —> Team ->membe->r -> NULL
+teamName:	 Head —> Spart->ak -> NULL
+commonPlayedMatches:	 35
+commonGoalsScored:	 20
+commonGoalsConceded:	 12
+commonAssists:	 8
+--------------------------------------
+ | /|\
+\|/ |
+--------------------------------------
+id:	 9
+name:	 Head —> Molod->tsov ->Artem-> Igor->evich -> NULL
+year:	 1990
+city:	 Head —> St. P->eters->burg -> NULL
+position:	 Head —> Defen->der -> NULL
+status:	 Head —> Team ->membe->r -> NULL
+teamName:	 Head —> Sokol -> NULL
+commonPlayedMatches:	 62
+commonGoalsScored:	 25
+commonGoalsConceded:	 40
+commonAssists:	 17
+--------------------------------------
+ | /|\
+\|/ |
+--------------------------------------
+id:	 10
+name:	 Head —> Ozman->ov Da->vid T->engiz->ovich -> NULL
+year:	 1995
+city:	 Head —> Sarat->ov -> NULL
+position:	 Head —> Defen->der -> NULL
+status:	 Head —> Team ->membe->r -> NULL
+teamName:	 Head —> Istik->lol -> NULL
+commonPlayedMatches:	 48
+commonGoalsScored:	 30
+commonGoalsConceded:	 19
+commonAssists:	 18
+--------------------------------------
+ | /|\
+\|/ |
+--------------------------------------
+id:	 11
+name:	 Head —> Pliev-> Zaur->bek I->gorev->ich -> NULL
+year:	 1991
+city:	 Head —> Dusha->nbe -> NULL
+position:	 Head —> Defen->der -> NULL
+status:	 Head —> Team ->membe->r -> NULL
+teamName:	 Head —> Zenit -> NULL
+commonPlayedMatches:	 38
+commonGoalsScored:	 15
+commonGoalsConceded:	 30
+commonAssists:	 9
+--------------------------------------
+ | /|\
+\|/ |
+--------------------------------------
+id:	 12
+name:	 Head —> Serik->ov Il->ya An->dreev->ich -> NULL
+year:	 1995
+city:	 Head —> Minsk -> NULL
+position:	 Head —> Defen->der -> NULL
+status:	 Head —> Team ->membe->r -> NULL
+teamName:	 Head —> Torpe->do -> NULL
+commonPlayedMatches:	 76
+commonGoalsScored:	 28
+commonGoalsConceded:	 57
+commonAssists:	 23
+--------------------------------------
+ | /|\
+\|/ |
+--------------------------------------
+id:	 13
+name:	 Head —> Tolst->opyat->ov Ni->kolay-> Vale->ryevi->ch -> NULL
+year:	 2002
+city:	 Head —> Mosco->w -> NULL
+position:	 Head —> Defen->der -> NULL
+status:	 Head —> Team ->membe->r -> NULL
+teamName:	 Head —> Spart->ak -> NULL
+commonPlayedMatches:	 29
+commonGoalsScored:	 8
+commonGoalsConceded:	 15
+commonAssists:	 6
+--------------------------------------
+ | /|\
+\|/ |
+--------------------------------------
+id:	 14
+name:	 Head —> Azaro->v Vla->dimir-> Alex->eevic->h -> NULL
+year:	 1994
+city:	 Head —> St. P->eters->burg -> NULL
+position:	 Head —> Midfi->elder -> NULL
+status:	 Head —> Team ->membe->r -> NULL
+teamName:	 Head —> Sokol -> NULL
+commonPlayedMatches:	 90
+commonGoalsScored:	 43
+commonGoalsConceded:	 49
+commonAssists:	 27
+--------------------------------------
+ | /|\
+\|/ |
+--------------------------------------
+id:	 15
+name:	 Head —> Babae->v Vla->dlen ->Igore->vich -> NULL
+year:	 1996
+city:	 Head —> Sarat->ov -> NULL
+position:	 Head —> Midfi->elder -> NULL
+status:	 Head —> Team ->membe->r -> NULL
+teamName:	 Head —> Istik->lol -> NULL
+commonPlayedMatches:	 52
+commonGoalsScored:	 38
+commonGoalsConceded:	 23
+commonAssists:	 22
+--------------------------------------
+ | /|\
+\|/ |
+--------------------------------------
+id:	 16
+name:	 Head —> Batyr->ev Am->ir Re->natov->ich -> NULL
+year:	 2002
+city:	 Head —> Dusha->nbe -> NULL
+position:	 Head —> Midfi->elder -> NULL
+status:	 Head —> Team ->membe->r -> NULL
+teamName:	 Head —> Zenit -> NULL
+commonPlayedMatches:	 43
+commonGoalsScored:	 18
+commonGoalsConceded:	 29
+commonAssists:	 12
+--------------------------------------
+ | /|\
+\|/ |
+--------------------------------------
+id:	 17
+name:	 Head —> Zabel->in Pa->vel V->italy->evich -> NULL
+year:	 1995
+city:	 Head —> Minsk -> NULL
+position:	 Head —> Midfi->elder -> NULL
+status:	 Head —> Team ->membe->r -> NULL
+teamName:	 Head —> Torpe->do -> NULL
+commonPlayedMatches:	 122
+commonGoalsScored:	 72
+commonGoalsConceded:	 61
+commonAssists:	 39
+--------------------------------------
+ | /|\
+\|/ |
+--------------------------------------
+id:	 18
+name:	 Head —> Kamys->hov I->lya V->ladis->lavov->ich -> NULL
+year:	 1997
+city:	 Head —> Mosco->w -> NULL
+position:	 Head —> Midfi->elder -> NULL
+status:	 Head —> Team ->membe->r -> NULL
+teamName:	 Head —> Spart->ak -> NULL
+commonPlayedMatches:	 85
+commonGoalsScored:	 52
+commonGoalsConceded:	 36
+commonAssists:	 25
+--------------------------------------
+ | /|\
+\|/ |
+--------------------------------------
+id:	 19
+name:	 Head —> Kozlo->vsky ->Nikit->a And->reevi->ch -> NULL
+year:	 1997
+city:	 Head —> St. P->eters->burg -> NULL
+position:	 Head —> Midfi->elder -> NULL
+status:	 Head —> Team ->membe->r -> NULL
+teamName:	 Head —> Sokol -> NULL
+commonPlayedMatches:	 48
+commonGoalsScored:	 32
+commonGoalsConceded:	 25
+commonAssists:	 20
+--------------------------------------
+ | /|\
+\|/ |
+--------------------------------------
+id:	 20
+name:	 Head —> Leont->iev I->gor O->legov->ich -> NULL
+year:	 1994
+city:	 Head —> Sarat->ov -> NULL
+position:	 Head —> Midfi->elder -> NULL
+status:	 Head —> Team ->membe->r -> NULL
+teamName:	 Head —> Istik->lol -> NULL
+commonPlayedMatches:	 55
+commonGoalsScored:	 40
+commonGoalsConceded:	 28
+commonAssists:	 25
+--------------------------------------
+ | /|\
+\|/ |
+--------------------------------------
+id:	 21
+name:	 Head —> Malts->ev Mi->khail-> Dmit->rievi->ch -> NULL
+year:	 2001
+city:	 Head —> Dusha->nbe -> NULL
+position:	 Head —> Midfi->elder -> NULL
+status:	 Head —> Team ->membe->r -> NULL
+teamName:	 Head —> Zenit -> NULL
+commonPlayedMatches:	 147
+commonGoalsScored:	 85
+commonGoalsConceded:	 75
+commonAssists:	 58
+--------------------------------------
+ | /|\
+\|/ |
+--------------------------------------
+id:	 22
+name:	 Head —> Samko-> Vlad->islav-> Igor->evich -> NULL
+year:	 2002
+city:	 Head —> Minsk -> NULL
+position:	 Head —> Midfi->elder -> NULL
+status:	 Head —> Team ->membe->r -> NULL
+teamName:	 Head —> Torpe->do -> NULL
+commonPlayedMatches:	 48
+commonGoalsScored:	 20
+commonGoalsConceded:	 26
+commonAssists:	 15
+--------------------------------------
+ | /|\
+\|/ |
+--------------------------------------
+id:	 23
+name:	 Head —> Sasin-> Dmit->ry An->dreev->ich -> NULL
+year:	 1996
+city:	 Head —> Mosco->w -> NULL
+position:	 Head —> Midfi->elder -> NULL
+status:	 Head —> Team ->membe->r -> NULL
+teamName:	 Head —> Spart->ak -> NULL
+commonPlayedMatches:	 42
+commonGoalsScored:	 30
+commonGoalsConceded:	 22
+commonAssists:	 17
+--------------------------------------
+ | /|\
+\|/ |
+--------------------------------------
+id:	 24
+name:	 Head —> Ivakh->nov M->atvey-> Andr->eevic->h -> NULL
+year:	 2003
+city:	 Head —> St. P->eters->burg -> NULL
+position:	 Head —> Forwa->rd -> NULL
+status:	 Head —> Team ->membe->r -> NULL
+teamName:	 Head —> Sokol -> NULL
+commonPlayedMatches:	 37
+commonGoalsScored:	 18
+commonGoalsConceded:	 16
+commonAssists:	 12
+--------------------------------------
+ | /|\
+\|/ |
+--------------------------------------
+id:	 25
+name:	 Head —> Maxim->enko ->Artem-> Serg->eyevi->ch -> NULL
+year:	 1998
+city:	 Head —> Sarat->ov -> NULL
+position:	 Head —> Forwa->rd -> NULL
+status:	 Head —> Team ->membe->r -> NULL
+teamName:	 Head —> Istik->lol -> NULL
+commonPlayedMatches:	 140
+commonGoalsScored:	 79
+commonGoalsConceded:	 76
+commonAssists:	 56
+--------------------------------------
+ | /|\
+\|/ |
+--------------------------------------
+id:	 26
+name:	 Head —> Moroz->ov Vl->adisl->av Ma->rkovi->ch -> NULL
+year:	 2001
+city:	 Head —> Dusha->nbe -> NULL
+position:	 Head —> Forwa->rd -> NULL
+status:	 Head —> Team ->membe->r -> NULL
+teamName:	 Head —> Zenit -> NULL
+commonPlayedMatches:	 47
+commonGoalsScored:	 25
+commonGoalsConceded:	 27
+commonAssists:	 14
+--------------------------------------
+ | /|\
+\|/ |
+--------------------------------------
+id:	 27
+name:	 Head —> Pogos->yan A->lbert-> Azat->ovich -> NULL
+year:	 2002
+city:	 Head —> Minsk -> NULL
+position:	 Head —> Forwa->rd -> NULL
+status:	 Head —> Team ->membe->r -> NULL
+teamName:	 Head —> Torpe->do -> NULL
+commonPlayedMatches:	 50
+commonGoalsScored:	 28
+commonGoalsConceded:	 22
+commonAssists:	 18
+--------------------------------------
+ | /|\
+\|/ |
+--------------------------------------
+id:	 28
+name:	 Head —> Weber-> Dmit->ry Gr->igori->evich -> NULL
+year:	 1995
+city:	 Head —> Mosco->w -> NULL
+position:	 Head —> Midfi->elder -> NULL
+status:	 Head —> Candi->date -> NULL
+teamName:	 Head —> Spart->ak -> NULL
+commonPlayedMatches:	 35
+commonGoalsScored:	 18
+commonGoalsConceded:	 15
+commonAssists:	 10
+--------------------------------------
+ | /|\
+\|/ |
+--------------------------------------
+id:	 29
+name:	 Head —> Ezhko->v Dan->ila A->ndree->vich -> NULL
+year:	 1987
+city:	 Head —> St. P->eters->burg -> NULL
+position:	 Head —> Forwa->rd -> NULL
+status:	 Head —> Candi->date -> NULL
+teamName:	 Head —> Sokol -> NULL
+commonPlayedMatches:	 42
+commonGoalsScored:	 20
+commonGoalsConceded:	 19
+commonAssists:	 14
+--------------------------------------
+ | /|\
+\|/ |
+--------------------------------------
+id:	 30
+name:	 Head —> Kazan->tsev ->Danil-> Anto->novic->h -> NULL
+year:	 2000
+city:	 Head —> Sarat->ov -> NULL
+position:	 Head —> Midfi->elder -> NULL
+status:	 Head —> Candi->date -> NULL
+teamName:	 Head —> Istik->lol -> NULL
+commonPlayedMatches:	 143
+commonGoalsScored:	 83
+commonGoalsConceded:	 78
+commonAssists:	 58
+--------------------------------------
+ | /|\
+\|/ |
+--------------------------------------
+id:	 31
+name:	 Head —> Karae->v Max->im Ir->izali->evich -> NULL
+year:	 1992
+city:	 Head —> Dusha->nbe -> NULL
+position:	 Head —> Defen->der -> NULL
+status:	 Head —> Candi->date -> NULL
+teamName:	 Head —> Zenit -> NULL
+commonPlayedMatches:	 55
+commonGoalsScored:	 30
+commonGoalsConceded:	 35
+commonAssists:	 20
+--------------------------------------
+ | /|\
+\|/ |
+--------------------------------------
+id:	 32
+name:	 Head —> Tursu->nov I->gor E->rkind->zhano->vich -> NULL
+year:	 1983
+city:	 Head —> Minsk -> NULL
+position:	 Head —> Forwa->rd -> NULL
+status:	 Head —> Candi->date -> NULL
+teamName:	 Head —> Torpe->do -> NULL
+commonPlayedMatches:	 142
+commonGoalsScored:	 75
+commonGoalsConceded:	 85
+commonAssists:	 55
+--------------------------------------
+ | /|\
+\|/ |
+--------------------------------------
+id:	 33
+name:	 Head —> Yugal->din D->mitry-> Ilyi->ch -> NULL
+year:	 1998
+city:	 Head —> Mosco->w -> NULL
+position:	 Head —> Midfi->elder -> NULL
+status:	 Head —> Candi->date -> NULL
+teamName:	 Head —> Spart->ak -> NULL
+commonPlayedMatches:	 45
+commonGoalsScored:	 25
+commonGoalsConceded:	 20
+commonAssists:	 18
+--------------------------------------
+ | /|\
+\|/ |
+--------------------------------------
+NULL Tail

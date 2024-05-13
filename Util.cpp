@@ -73,3 +73,14 @@ int charToInt(const char *str) {
 
     return sign * result;
 }
+
+void printString(std::ofstream &output, const char *str) {
+    int len = length(str); // Используем функцию strlen для определения длины строки
+    output << "Head —> ";
+    for (int i = 0; i < len; ++i) {
+        output << str[i];
+        if ((i + 1) % 5 == 0 && (i + 1) != len) // Проверяем, что длина строки не кратна 5 и не является последним символом
+            output << "->"; // Выводим стрелку только если длина строки не кратна 5 и не последний символ
+    }
+    output << " -> NULL";
+}

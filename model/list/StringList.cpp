@@ -68,3 +68,13 @@ std::ostream& operator<<(std::ostream& os, const StringList& list) {
     }
     return os;
 }
+void StringList::print(std::ofstream &output){
+    StringNode* current = this->head;
+    while (current != nullptr) {
+        printString(output,current->data);
+        if (current->next != nullptr) {
+            output << "\t"; // Выводим табуляцию между элементами списка
+        }
+        current = current->next;
+    }
+}

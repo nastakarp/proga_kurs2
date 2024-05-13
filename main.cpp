@@ -235,6 +235,7 @@ int main() {
     }
     readPlayersFromFile(playerList, fullnameList, dateOfBirthList, cityList, positionList, statusList);
     readTeamsFromFile(playerList, teamNameList);
+    PlayerList::printPlayer(playerList);
     menu(playerList, positionList, teamNameList, dateOfBirthList, output_activity);
 
     return 0;

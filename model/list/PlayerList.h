@@ -21,6 +21,8 @@ struct PlayerList {
     friend std::ostream &operator<<(std::ostream &os, const PlayerList &list);
 
     [[nodiscard]] Player *findById(int playerId) const;
+
+    static void printPlayer(const PlayerList &list);
 };
 
 #endif //PROGA_KURS_PLAYERLIST_H

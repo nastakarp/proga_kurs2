@@ -15,5 +15,5 @@ int strcmp(const char *str1, const char *str2);
 char *readUntilComma(std::ifstream &input);
 
 int charToInt(const char *str);
-
+void printString(std::ofstream &output, const char *str);
 #endif //PROGA_KURS_UTIL_H
