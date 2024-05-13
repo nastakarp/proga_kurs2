@@ -224,6 +224,8 @@ void printPlayerCards(PlayerList *playerList, int choice) {
         case 4:
             sortPlayers(playerList, compareByAssists);
             break;
+        case 5:
+            break;
         default:
             std::cout << "Wrong choice. Try again" << std::endl;
             break;
@@ -273,6 +275,8 @@ void printPlayerCardsByTeam(PlayerList *playerList, StringList *teamNameList,int
             break;
         case 4:
             sortPlayers(playerList, compareByAssists);
+            break;
+        case 5:
             break;
         default:
             std::cout << "Wrong choice. Try again" << std::endl;

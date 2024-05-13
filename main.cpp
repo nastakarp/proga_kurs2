@@ -72,7 +72,8 @@ void readTeamsFromFile(PlayerList &playerList, StringList &teamNameList) {
     }
 }
 
-void menu(PlayerList &playerList, StringList &positionList, StringList &teamNameList, IntList &dateOfBirthList) {
+void menu(PlayerList &playerList, StringList &positionList, StringList &teamNameList, IntList &dateOfBirthList,
+          std::ofstream &output_activity) {
     int choice;
     bool exitMenu = false;
 
@@ -99,9 +100,13 @@ void menu(PlayerList &playerList, StringList &positionList, StringList &teamName
         switch (choice) {
             case 1:
                 printPlayersGroupedByPositionAndAgeCategory(&positionList, &dateOfBirthList, &playerList);
+                output_activity << "(1) сформирован список игроков, сгруппированный по позиции и возрастной категории"
+                                << std::endl;
                 break;
             case 2:
                 printPlayersInTeams(&playerList, &teamNameList);
+                output_activity << "(2) сформирован список игроков и кандидатов, которые играли ранее в одних командах"
+                                << std::endl;
                 break;
             case 3:
                 int choice3;
@@ -116,6 +121,39 @@ void menu(PlayerList &playerList, StringList &positionList, StringList &teamName
                     std::cout << "Enter your choice: ";
                     std::cin >> choice3;
                     printPlayerCards(&playerList, choice3);
+                    switch (choice3) {
+                        case 1:
+                            output_activity
+                                    << "(3.1) сформированы учетные карточки на каждого игрока, упорядоченные по общему числу игр за все команды"
+                                    << std::endl;
+                            break;
+                        case 2:
+                            output_activity
+                                    << "(3.2) сформированы учетные карточки на каждого игрока, упорядоченные по общему числу забитых голов за все команды"
+                                    << std::endl;
+                            break;
+                        case 3:
+                            output_activity
+                                    << "(3.3) сформированы учетные карточки на каждого игрока, упорядоченные по общему числу пропущенных голов за все команды"
+                                    << std::endl;
+                            break;
+                        case 4:
+                            output_activity
+                                    << "(3.4) сформированы учетные карточки на каждого игрока, упорядоченные по общему числу голевых передач за все команды"
+                                    << std::endl;
+                            break;
+                        case 5:
+                            output_activity
+                                    << "(3.5) возвращение к общему меню"
+                                    << std::endl;
+                            break;
+                        default:
+                            output_activity
+                                    << "(3) Неправильный выбор. Попробуйте снова"
+                                    << std::endl;
+                            break;
+                    }
+
                 } while (choice3 != 5); // Повторять до тех пор, пока пользователь не выберет "Вернуться в главное меню"
                 break;
             case 4:
@@ -131,14 +169,48 @@ void menu(PlayerList &playerList, StringList &positionList, StringList &teamName
                     std::cout << "Enter your choice: ";
                     std::cin >> choice4;
                     printPlayerCardsByTeam(&playerList, &teamNameList, choice4);
+                    switch (choice4) {
+                        case 1:
+                            output_activity
+                                    << "(4.1) сформированы учетные карточки на каждого игрока команды, упорядоченные по общему числу игр за команду"
+                                    << std::endl;
+                            break;
+                        case 2:
+                            output_activity
+                                    << "(4.2) сформированы учетные карточки на каждого игрока команды, упорядоченные по общему числу забитых голов за команду"
+                                    << std::endl;
+                            break;
+                        case 3:
+                            output_activity
+                                    << "(4.3) сформированы учетные карточки на каждого игрока команды, упорядоченные по общему числу пропущенных голов за команду"
+                                    << std::endl;
+                            break;
+                        case 4:
+                            output_activity
+                                    << "(4.4) сформированы учетные карточки на каждого игрока команды, упорядоченные по общему числу голевых передач за команду"
+                                    << std::endl;
+                            break;
+                        case 5:
+                            output_activity
+                                    << "(4.5) возвращение к общему меню"
+                                    << std::endl;
+                            break;
+                        default:
+                            output_activity
+                                    << "(4) Неправильный выбор. Попробуйте снова"
+                                    << std::endl;
+                            break;
+                    }
                 } while (choice4 != 5); // Повторять до тех пор, пока пользователь не выберет "Вернуться в главное меню"
                 break;
                 //printPlayerCardsByTeam(&playerList, &teamNameList);
             case 5:
                 exitMenu = true;
+                output_activity << "работа программы завершена" << std::endl;
                 break;
             default:
                 std::cout << "Wrong choice. Try again" << std::endl;
+                output_activity << "Неправильный выбор. Попробуйте снова" << std::endl;
                 break;
         }
     }
@@ -156,9 +228,14 @@ int main() {
 
     StringList teamNameList;
 
+    std::ofstream output_activity("output_activity.txt");
+    if (!output_activity.is_open()) {
+        std::cerr << "Error: Unable to open output file." << std::endl;
+        return 1;
+    }
     readPlayersFromFile(playerList, fullnameList, dateOfBirthList, cityList, positionList, statusList);
     readTeamsFromFile(playerList, teamNameList);
-    menu(playerList, positionList, teamNameList, dateOfBirthList);
+    menu(playerList, positionList, teamNameList, dateOfBirthList, output_activity);
 
     return 0;
 }
