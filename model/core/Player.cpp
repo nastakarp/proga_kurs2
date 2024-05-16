@@ -30,7 +30,12 @@ std::ostream &operator<<(std::ostream &os, const Player &player) {
     os << *(player.position) << " ";
     os << *(player.status) << " ";
     os << player.commonPlayedMatches << " ";
-    os << *player.statList->head->data.teamName << " ";
+    auto* statListNode = player.statList;
+    auto* current = statListNode->head;
+    while (current != nullptr) {
+        os << *(current->data.teamName) << " ";
+        current = current->next;
+    }
     return os;
 }
 
