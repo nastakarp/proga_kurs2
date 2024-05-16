@@ -217,7 +217,6 @@ void menu(PlayerList &playerList, StringList &positionList, StringList &teamName
 }
 
 int main() {
-
     StringList fullnameList;
     IntList dateOfBirthList;
     StringList cityList;
