@@ -2,15 +2,20 @@ Team: Istiklol
 Kosarevsky Pyotr Ilyich
 Ozmanov David Tengizovich
 Babaev Vladlen Igorevich
+Zabelin Pavel Vitalyevich
 Leontiev Igor Olegovich
+Maltsev Mikhail Dmitrievich
 Maximenko Artem Sergeyevich
 Kazantsev Danil Antonovich
+Tursunov Igor Erkindzhanovich
 -------------------
 
 Team: Sokol
 Gudkov Yan Mikhailovich
 Molodtsov Artem Igorevich
 Azarov Vladimir Alexeevich
+Zabelin Pavel Vitalyevich
+Kamyshov Ilya Vladislavovich
 Kozlovsky Nikita Andreevich
 Ivakhnov Matvey Andreevich
 Ezhkov Danila Andreevich
@@ -18,11 +23,15 @@ Ezhkov Danila Andreevich
 
 Team: Spartak
 Fedorov Artem Anatolyevich
+Dudiev Aslan Muratovich
 Mankov Nikita Sergeyevich
 Tolstopyatov Nikolay Valeryevich
 Kamyshov Ilya Vladislavovich
+Maltsev Mikhail Dmitrievich
 Sasin Dmitry Andreevich
+Maximenko Artem Sergeyevich
 Weber Dmitry Grigorievich
+Kazantsev Danil Antonovich
 Yugaldin Dmitry Ilyich
 -------------------
 
@@ -30,6 +39,7 @@ Team: Torpedo
 Kraikov Timur Viktorovich
 Dudiev Aslan Muratovich
 Evdokimov Andrey Vladimirovich
+Molodtsov Artem Igorevich
 Serikov Ilya Andreevich
 Zabelin Pavel Vitalyevich
 Samko Vladislav Igorevich
@@ -39,10 +49,16 @@ Tursunov Igor Erkindzhanovich
 
 Team: Zenit
 Abazov Astemir Valeryevich
+Gudkov Yan Mikhailovich
 Pliev Zaurbek Igorevich
+Serikov Ilya Andreevich
+Azarov Vladimir Alexeevich
 Batyrev Amir Renatovich
 Maltsev Mikhail Dmitrievich
+Maximenko Artem Sergeyevich
 Morozov Vladislav Markovich
+Kazantsev Danil Antonovich
 Karaev Maxim Irizalievich
+Tursunov Igor Erkindzhanovich
 -------------------
 

@@ -59,10 +59,12 @@ Player *PlayerList::findById(int playerId) const {
 // Оператор вывода узла в поток
 std::ostream &operator<<(std::ostream &os, const PlayerList &list) {
     PlayerNode *current = list.head;
+    os<< "Head NULL-> ";
     while (current != nullptr) {
         os << current->data << " -> ";
         current = current->next;
     }
+    os<<"NULL Tail\n" ;
     return os;
 }
 
@@ -94,7 +96,17 @@ void PlayerList::printPlayer(const PlayerList &list) {
         printString(output,*current->data.status);
         output<<std::endl;
         output << "teamName:\t ";
-        printString(output,*current->data.statList->head->data.teamName);
+
+        Player currentPlayer = current->data;
+        auto* statList = currentPlayer.statList;
+        auto* teamNode = statList->head;
+
+        while (teamNode != nullptr) {
+            printString(output, *teamNode->data.teamName);
+            output << " "; // Разделяем команды пробелом
+            teamNode = teamNode->next;
+        }
+        //printString(output,*current->data.statList->head->data.teamName);
         output<<std::endl;
         output << "commonPlayedMatches:\t " <<current->data.commonPlayedMatches << std::endl;
         output << "commonGoalsScored:\t " <<current->data.commonGoalsScored << std::endl;

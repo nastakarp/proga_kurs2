@@ -1,7 +1,10 @@
 Player Cards for Team: Istiklol
 Player                             Matches        GoalsScored    GoalsConceded  Assists        
+Maltsev Mikhail Dmitrievich        147            85             75             58             
 Kazantsev Danil Antonovich         143            83             78             58             
+Tursunov Igor Erkindzhanovich      142            75             85             55             
 Maximenko Artem Sergeyevich        140            79             76             56             
+Zabelin Pavel Vitalyevich          122            72             61             39             
 Leontiev Igor Olegovich            55             40             28             25             
 Babaev Vladlen Igorevich           52             38             23             22             
 Kosarevsky Pyotr Ilyich            50             35             20             15             
@@ -9,7 +12,9 @@ Ozmanov David Tengizovich          48             30             19             
 --------------------------------------
 Player Cards for Team: Sokol
 Player                             Matches        GoalsScored    GoalsConceded  Assists        
+Zabelin Pavel Vitalyevich          122            72             61             39             
 Azarov Vladimir Alexeevich         90             43             49             27             
+Kamyshov Ilya Vladislavovich       85             52             36             25             
 Molodtsov Artem Igorevich          62             25             40             17             
 Gudkov Yan Mikhailovich            60             36             25             15             
 Kozlovsky Nikita Andreevich        48             32             25             20             
@@ -18,7 +23,11 @@ Ivakhnov Matvey Andreevich         37             18             16             
 --------------------------------------
 Player Cards for Team: Spartak
 Player                             Matches        GoalsScored    GoalsConceded  Assists        
+Maltsev Mikhail Dmitrievich        147            85             75             58             
+Kazantsev Danil Antonovich         143            83             78             58             
+Maximenko Artem Sergeyevich        140            79             76             56             
 Kamyshov Ilya Vladislavovich       85             52             36             25             
+Dudiev Aslan Muratovich            80             23             35             19             
 Fedorov Artem Anatolyevich         60             12             30             20             
 Yugaldin Dmitry Ilyich             45             25             20             18             
 Sasin Dmitry Andreevich            42             30             22             17             
@@ -32,6 +41,7 @@ Tursunov Igor Erkindzhanovich      142            75             85             
 Zabelin Pavel Vitalyevich          122            72             61             39             
 Dudiev Aslan Muratovich            80             23             35             19             
 Serikov Ilya Andreevich            76             28             57             23             
+Molodtsov Artem Igorevich          62             25             40             17             
 Pogosyan Albert Azatovich          50             28             22             18             
 Samko Vladislav Igorevich          48             20             26             15             
 Kraikov Timur Viktorovich          30             2              25             5              
@@ -40,6 +50,12 @@ Evdokimov Andrey Vladimirovich     20             3              18             
 Player Cards for Team: Zenit
 Player                             Matches        GoalsScored    GoalsConceded  Assists        
 Maltsev Mikhail Dmitrievich        147            85             75             58             
+Kazantsev Danil Antonovich         143            83             78             58             
+Tursunov Igor Erkindzhanovich      142            75             85             55             
+Maximenko Artem Sergeyevich        140            79             76             56             
+Azarov Vladimir Alexeevich         90             43             49             27             
+Serikov Ilya Andreevich            76             28             57             23             
+Gudkov Yan Mikhailovich            60             36             25             15             
 Karaev Maxim Irizalievich          55             30             35             20             
 Morozov Vladislav Markovich        47             25             27             14             
 Batyrev Amir Renatovich            43             18             29             12             

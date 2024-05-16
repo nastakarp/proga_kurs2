@@ -68,8 +68,15 @@ void printPlayersGroupedByPositionAndAgeCategory(StringList *positionList, IntLi
     outputFile.close();
 }
 
-bool playedInTeam(const Player &player, const char *teamName) {
-    return strcmp(*(player.statList->head->data.teamName), teamName) == 0;
+bool playedInTeam(const Player& player, const char* teamName) {
+    auto* currentTeamNode = player.statList->head;
+    while (currentTeamNode != nullptr) {
+        if (strcmp(*currentTeamNode->data.teamName, teamName) == 0) {
+            return true;
+        }
+        currentTeamNode = currentTeamNode->next;
+    }
+    return false;
 }
 
 //2 список игроков и кандидатов, которые играли ранее в одних командах
@@ -79,20 +86,24 @@ void printPlayersInTeams(PlayerList *playerList, StringList *teamNameList) {
         std::cerr << "Unable to open output file";
         return;
     }
-    auto teamNameNode = teamNameList->head;
+
+    auto* teamNameNode = teamNameList->head;
     while (teamNameNode != nullptr) {
         outputFile << "Team: " << teamNameNode->data << std::endl;
+
         // Вывод игроков команды
-        PlayerNode *currentPlayerNode = playerList->head;
+        PlayerNode* currentPlayerNode = playerList->head;
         while (currentPlayerNode != nullptr) {
             if (playedInTeam(currentPlayerNode->data, teamNameNode->data)) {
                 outputFile << *(currentPlayerNode->data.name) << std::endl;
             }
             currentPlayerNode = currentPlayerNode->next;
         }
+
         outputFile << "-------------------" << std::endl << std::endl;
         teamNameNode = teamNameNode->next;
     }
+
 
     outputFile.close();
 }

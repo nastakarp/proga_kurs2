@@ -9,7 +9,7 @@ year:	 1999
 city:	 Head —> Dusha->nbe -> NULL
 position:	 Head —> Goalk->eeper -> NULL
 status:	 Head —> Team ->membe->r -> NULL
-teamName:	 Head —> Istik->lol -> NULL
+teamName:	 Head —> Istik->lol -> NULL 
 commonPlayedMatches:	 50
 commonGoalsScored:	 35
 commonGoalsConceded:	 20
@@ -24,7 +24,7 @@ year:	 2001
 city:	 Head —> Minsk -> NULL
 position:	 Head —> Goalk->eeper -> NULL
 status:	 Head —> Team ->membe->r -> NULL
-teamName:	 Head —> Torpe->do -> NULL
+teamName:	 Head —> Torpe->do -> NULL 
 commonPlayedMatches:	 30
 commonGoalsScored:	 2
 commonGoalsConceded:	 25
@@ -39,7 +39,7 @@ year:	 1984
 city:	 Head —> Mosco->w -> NULL
 position:	 Head —> Goalk->eeper -> NULL
 status:	 Head —> Team ->membe->r -> NULL
-teamName:	 Head —> Spart->ak -> NULL
+teamName:	 Head —> Spart->ak -> NULL 
 commonPlayedMatches:	 60
 commonGoalsScored:	 12
 commonGoalsConceded:	 30
@@ -54,7 +54,7 @@ year:	 1996
 city:	 Head —> St. P->eters->burg -> NULL
 position:	 Head —> Defen->der -> NULL
 status:	 Head —> Team ->membe->r -> NULL
-teamName:	 Head —> Zenit -> NULL
+teamName:	 Head —> Zenit -> NULL 
 commonPlayedMatches:	 40
 commonGoalsScored:	 0
 commonGoalsConceded:	 35
@@ -69,7 +69,7 @@ year:	 2002
 city:	 Head —> Sarat->ov -> NULL
 position:	 Head —> Defen->der -> NULL
 status:	 Head —> Team ->membe->r -> NULL
-teamName:	 Head —> Sokol -> NULL
+teamName:	 Head —> Sokol -> NULL Head —> Zenit -> NULL 
 commonPlayedMatches:	 60
 commonGoalsScored:	 36
 commonGoalsConceded:	 25
@@ -84,7 +84,7 @@ year:	 1990
 city:	 Head —> Dusha->nbe -> NULL
 position:	 Head —> Defen->der -> NULL
 status:	 Head —> Team ->membe->r -> NULL
-teamName:	 Head —> Torpe->do -> NULL
+teamName:	 Head —> Torpe->do -> NULL Head —> Spart->ak -> NULL 
 commonPlayedMatches:	 80
 commonGoalsScored:	 23
 commonGoalsConceded:	 35
@@ -99,7 +99,7 @@ year:	 1999
 city:	 Head —> Minsk -> NULL
 position:	 Head —> Defen->der -> NULL
 status:	 Head —> Team ->membe->r -> NULL
-teamName:	 Head —> Torpe->do -> NULL
+teamName:	 Head —> Torpe->do -> NULL 
 commonPlayedMatches:	 20
 commonGoalsScored:	 3
 commonGoalsConceded:	 18
@@ -114,7 +114,7 @@ year:	 2000
 city:	 Head —> Mosco->w -> NULL
 position:	 Head —> Defen->der -> NULL
 status:	 Head —> Team ->membe->r -> NULL
-teamName:	 Head —> Spart->ak -> NULL
+teamName:	 Head —> Spart->ak -> NULL 
 commonPlayedMatches:	 35
 commonGoalsScored:	 20
 commonGoalsConceded:	 12
@@ -129,7 +129,7 @@ year:	 1990
 city:	 Head —> St. P->eters->burg -> NULL
 position:	 Head —> Defen->der -> NULL
 status:	 Head —> Team ->membe->r -> NULL
-teamName:	 Head —> Sokol -> NULL
+teamName:	 Head —> Sokol -> NULL Head —> Torpe->do -> NULL 
 commonPlayedMatches:	 62
 commonGoalsScored:	 25
 commonGoalsConceded:	 40
@@ -144,7 +144,7 @@ year:	 1995
 city:	 Head —> Sarat->ov -> NULL
 position:	 Head —> Defen->der -> NULL
 status:	 Head —> Team ->membe->r -> NULL
-teamName:	 Head —> Istik->lol -> NULL
+teamName:	 Head —> Istik->lol -> NULL 
 commonPlayedMatches:	 48
 commonGoalsScored:	 30
 commonGoalsConceded:	 19
@@ -159,7 +159,7 @@ year:	 1991
 city:	 Head —> Dusha->nbe -> NULL
 position:	 Head —> Defen->der -> NULL
 status:	 Head —> Team ->membe->r -> NULL
-teamName:	 Head —> Zenit -> NULL
+teamName:	 Head —> Zenit -> NULL 
 commonPlayedMatches:	 38
 commonGoalsScored:	 15
 commonGoalsConceded:	 30
@@ -174,7 +174,7 @@ year:	 1995
 city:	 Head —> Minsk -> NULL
 position:	 Head —> Defen->der -> NULL
 status:	 Head —> Team ->membe->r -> NULL
-teamName:	 Head —> Torpe->do -> NULL
+teamName:	 Head —> Torpe->do -> NULL Head —> Zenit -> NULL 
 commonPlayedMatches:	 76
 commonGoalsScored:	 28
 commonGoalsConceded:	 57
@@ -189,7 +189,7 @@ year:	 2002
 city:	 Head —> Mosco->w -> NULL
 position:	 Head —> Defen->der -> NULL
 status:	 Head —> Team ->membe->r -> NULL
-teamName:	 Head —> Spart->ak -> NULL
+teamName:	 Head —> Spart->ak -> NULL 
 commonPlayedMatches:	 29
 commonGoalsScored:	 8
 commonGoalsConceded:	 15
@@ -204,7 +204,7 @@ year:	 1994
 city:	 Head —> St. P->eters->burg -> NULL
 position:	 Head —> Midfi->elder -> NULL
 status:	 Head —> Team ->membe->r -> NULL
-teamName:	 Head —> Sokol -> NULL
+teamName:	 Head —> Sokol -> NULL Head —> Zenit -> NULL 
 commonPlayedMatches:	 90
 commonGoalsScored:	 43
 commonGoalsConceded:	 49
@@ -219,7 +219,7 @@ year:	 1996
 city:	 Head —> Sarat->ov -> NULL
 position:	 Head —> Midfi->elder -> NULL
 status:	 Head —> Team ->membe->r -> NULL
-teamName:	 Head —> Istik->lol -> NULL
+teamName:	 Head —> Istik->lol -> NULL 
 commonPlayedMatches:	 52
 commonGoalsScored:	 38
 commonGoalsConceded:	 23
@@ -234,7 +234,7 @@ year:	 2002
 city:	 Head —> Dusha->nbe -> NULL
 position:	 Head —> Midfi->elder -> NULL
 status:	 Head —> Team ->membe->r -> NULL
-teamName:	 Head —> Zenit -> NULL
+teamName:	 Head —> Zenit -> NULL 
 commonPlayedMatches:	 43
 commonGoalsScored:	 18
 commonGoalsConceded:	 29
@@ -249,7 +249,7 @@ year:	 1995
 city:	 Head —> Minsk -> NULL
 position:	 Head —> Midfi->elder -> NULL
 status:	 Head —> Team ->membe->r -> NULL
-teamName:	 Head —> Torpe->do -> NULL
+teamName:	 Head —> Torpe->do -> NULL Head —> Istik->lol -> NULL Head —> Sokol -> NULL 
 commonPlayedMatches:	 122
 commonGoalsScored:	 72
 commonGoalsConceded:	 61
@@ -264,7 +264,7 @@ year:	 1997
 city:	 Head —> Mosco->w -> NULL
 position:	 Head —> Midfi->elder -> NULL
 status:	 Head —> Team ->membe->r -> NULL
-teamName:	 Head —> Spart->ak -> NULL
+teamName:	 Head —> Spart->ak -> NULL Head —> Sokol -> NULL 
 commonPlayedMatches:	 85
 commonGoalsScored:	 52
 commonGoalsConceded:	 36
@@ -279,7 +279,7 @@ year:	 1997
 city:	 Head —> St. P->eters->burg -> NULL
 position:	 Head —> Midfi->elder -> NULL
 status:	 Head —> Team ->membe->r -> NULL
-teamName:	 Head —> Sokol -> NULL
+teamName:	 Head —> Sokol -> NULL 
 commonPlayedMatches:	 48
 commonGoalsScored:	 32
 commonGoalsConceded:	 25
@@ -294,7 +294,7 @@ year:	 1994
 city:	 Head —> Sarat->ov -> NULL
 position:	 Head —> Midfi->elder -> NULL
 status:	 Head —> Team ->membe->r -> NULL
-teamName:	 Head —> Istik->lol -> NULL
+teamName:	 Head —> Istik->lol -> NULL 
 commonPlayedMatches:	 55
 commonGoalsScored:	 40
 commonGoalsConceded:	 28
@@ -309,7 +309,7 @@ year:	 2001
 city:	 Head —> Dusha->nbe -> NULL
 position:	 Head —> Midfi->elder -> NULL
 status:	 Head —> Team ->membe->r -> NULL
-teamName:	 Head —> Zenit -> NULL
+teamName:	 Head —> Zenit -> NULL Head —> Istik->lol -> NULL Head —> Spart->ak -> NULL 
 commonPlayedMatches:	 147
 commonGoalsScored:	 85
 commonGoalsConceded:	 75
@@ -324,7 +324,7 @@ year:	 2002
 city:	 Head —> Minsk -> NULL
 position:	 Head —> Midfi->elder -> NULL
 status:	 Head —> Team ->membe->r -> NULL
-teamName:	 Head —> Torpe->do -> NULL
+teamName:	 Head —> Torpe->do -> NULL 
 commonPlayedMatches:	 48
 commonGoalsScored:	 20
 commonGoalsConceded:	 26
@@ -339,7 +339,7 @@ year:	 1996
 city:	 Head —> Mosco->w -> NULL
 position:	 Head —> Midfi->elder -> NULL
 status:	 Head —> Team ->membe->r -> NULL
-teamName:	 Head —> Spart->ak -> NULL
+teamName:	 Head —> Spart->ak -> NULL 
 commonPlayedMatches:	 42
 commonGoalsScored:	 30
 commonGoalsConceded:	 22
@@ -354,7 +354,7 @@ year:	 2003
 city:	 Head —> St. P->eters->burg -> NULL
 position:	 Head —> Forwa->rd -> NULL
 status:	 Head —> Team ->membe->r -> NULL
-teamName:	 Head —> Sokol -> NULL
+teamName:	 Head —> Sokol -> NULL 
 commonPlayedMatches:	 37
 commonGoalsScored:	 18
 commonGoalsConceded:	 16
@@ -369,7 +369,7 @@ year:	 1998
 city:	 Head —> Sarat->ov -> NULL
 position:	 Head —> Forwa->rd -> NULL
 status:	 Head —> Team ->membe->r -> NULL
-teamName:	 Head —> Istik->lol -> NULL
+teamName:	 Head —> Istik->lol -> NULL Head —> Spart->ak -> NULL Head —> Zenit -> NULL 
 commonPlayedMatches:	 140
 commonGoalsScored:	 79
 commonGoalsConceded:	 76
@@ -384,7 +384,7 @@ year:	 2001
 city:	 Head —> Dusha->nbe -> NULL
 position:	 Head —> Forwa->rd -> NULL
 status:	 Head —> Team ->membe->r -> NULL
-teamName:	 Head —> Zenit -> NULL
+teamName:	 Head —> Zenit -> NULL 
 commonPlayedMatches:	 47
 commonGoalsScored:	 25
 commonGoalsConceded:	 27
@@ -399,7 +399,7 @@ year:	 2002
 city:	 Head —> Minsk -> NULL
 position:	 Head —> Forwa->rd -> NULL
 status:	 Head —> Team ->membe->r -> NULL
-teamName:	 Head —> Torpe->do -> NULL
+teamName:	 Head —> Torpe->do -> NULL 
 commonPlayedMatches:	 50
 commonGoalsScored:	 28
 commonGoalsConceded:	 22
@@ -414,7 +414,7 @@ year:	 1995
 city:	 Head —> Mosco->w -> NULL
 position:	 Head —> Midfi->elder -> NULL
 status:	 Head —> Candi->date -> NULL
-teamName:	 Head —> Spart->ak -> NULL
+teamName:	 Head —> Spart->ak -> NULL 
 commonPlayedMatches:	 35
 commonGoalsScored:	 18
 commonGoalsConceded:	 15
@@ -429,7 +429,7 @@ year:	 1987
 city:	 Head —> St. P->eters->burg -> NULL
 position:	 Head —> Forwa->rd -> NULL
 status:	 Head —> Candi->date -> NULL
-teamName:	 Head —> Sokol -> NULL
+teamName:	 Head —> Sokol -> NULL 
 commonPlayedMatches:	 42
 commonGoalsScored:	 20
 commonGoalsConceded:	 19
@@ -444,7 +444,7 @@ year:	 2000
 city:	 Head —> Sarat->ov -> NULL
 position:	 Head —> Midfi->elder -> NULL
 status:	 Head —> Candi->date -> NULL
-teamName:	 Head —> Istik->lol -> NULL
+teamName:	 Head —> Istik->lol -> NULL Head —> Spart->ak -> NULL Head —> Zenit -> NULL 
 commonPlayedMatches:	 143
 commonGoalsScored:	 83
 commonGoalsConceded:	 78
@@ -459,7 +459,7 @@ year:	 1992
 city:	 Head —> Dusha->nbe -> NULL
 position:	 Head —> Defen->der -> NULL
 status:	 Head —> Candi->date -> NULL
-teamName:	 Head —> Zenit -> NULL
+teamName:	 Head —> Zenit -> NULL 
 commonPlayedMatches:	 55
 commonGoalsScored:	 30
 commonGoalsConceded:	 35
@@ -474,7 +474,7 @@ year:	 1983
 city:	 Head —> Minsk -> NULL
 position:	 Head —> Forwa->rd -> NULL
 status:	 Head —> Candi->date -> NULL
-teamName:	 Head —> Torpe->do -> NULL
+teamName:	 Head —> Torpe->do -> NULL Head —> Istik->lol -> NULL Head —> Zenit -> NULL 
 commonPlayedMatches:	 142
 commonGoalsScored:	 75
 commonGoalsConceded:	 85
@@ -489,7 +489,7 @@ year:	 1998
 city:	 Head —> Mosco->w -> NULL
 position:	 Head —> Midfi->elder -> NULL
 status:	 Head —> Candi->date -> NULL
-teamName:	 Head —> Spart->ak -> NULL
+teamName:	 Head —> Spart->ak -> NULL 
 commonPlayedMatches:	 45
 commonGoalsScored:	 25
 commonGoalsConceded:	 20
