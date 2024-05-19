@@ -68,8 +68,8 @@ void printPlayersGroupedByPositionAndAgeCategory(StringList *positionList, IntLi
     outputFile.close();
 }
 
-bool playedInTeam(const Player& player, const char* teamName) {
-    auto* currentTeamNode = player.statList->head;
+bool playedInTeam(const Player &player, const char *teamName) {
+    auto *currentTeamNode = player.statList->head;
     while (currentTeamNode != nullptr) {
         if (strcmp(*currentTeamNode->data.teamName, teamName) == 0) {
             return true;
@@ -87,12 +87,12 @@ void printPlayersInTeams(PlayerList *playerList, StringList *teamNameList) {
         return;
     }
 
-    auto* teamNameNode = teamNameList->head;
+    auto *teamNameNode = teamNameList->head;
     while (teamNameNode != nullptr) {
         outputFile << "Team: " << teamNameNode->data << std::endl;
 
         // Вывод игроков команды
-        PlayerNode* currentPlayerNode = playerList->head;
+        PlayerNode *currentPlayerNode = playerList->head;
         while (currentPlayerNode != nullptr) {
             if (playedInTeam(currentPlayerNode->data, teamNameNode->data)) {
                 outputFile << *(currentPlayerNode->data.name) << std::endl;
@@ -257,8 +257,161 @@ void printPlayerCards(PlayerList *playerList, int choice) {
     outputFile.close();
 }
 
+bool compareBy_PlayedMatches(const Player &player1, const Player &player2, const char *teamName) {
+    int player_1 = 0;
+    int player_2 = 0;
+    auto teamStatNode1 = player1.statList->head;
+    while (teamStatNode1 != nullptr) {
+        if (*teamStatNode1->data.teamName == teamName) {
+            player_1 = teamStatNode1->data.playedMatches;
+            break;
+        }
+        teamStatNode1=teamStatNode1->next;
+    }
+    auto teamStatNode2 = player2.statList->head;
+    while (teamStatNode2 != nullptr) {
+        if (*teamStatNode2->data.teamName == teamName) {
+            player_2 = teamStatNode2->data.playedMatches;
+            break;
+        }
+        teamStatNode2=teamStatNode2->next;
+    }
+    return player_1 > player_2;
+}
+
+bool compareBy_GoalsScored(const Player &player1, const Player &player2, const char *teamName) {
+    int player_1 = 0;
+    int player_2 = 0;
+    auto teamStatNode1 = player1.statList->head;
+    while (teamStatNode1 != nullptr) {
+        if (*teamStatNode1->data.teamName == teamName) {
+            player_1 = teamStatNode1->data.goalsScored;
+            break;
+        }
+        teamStatNode1=teamStatNode1->next;
+    }
+    auto teamStatNode2 = player2.statList->head;
+    while (teamStatNode2 != nullptr) {
+        if (*teamStatNode2->data.teamName == teamName) {
+            player_2 = teamStatNode2->data.goalsScored;
+            break;
+        }
+        teamStatNode2=teamStatNode2->next;
+    }
+    return player_1 > player_2;
+}
+
+bool compareBy_GoalsConceded(const Player &player1, const Player &player2, const char *teamName) {
+    int player_1 = 0;
+    int player_2 = 0;
+    auto teamStatNode1 = player1.statList->head;
+    while (teamStatNode1 != nullptr) {
+        if (*teamStatNode1->data.teamName == teamName) {
+            player_1 = teamStatNode1->data.goalsConceded;
+            break;
+        }
+        teamStatNode1=teamStatNode1->next;
+    }
+    auto teamStatNode2 = player2.statList->head;
+    while (teamStatNode2 != nullptr) {
+        if (*teamStatNode2->data.teamName == teamName) {
+            player_2 = teamStatNode2->data.goalsConceded;
+            break;
+        }
+        teamStatNode2=teamStatNode2->next;
+    }
+    return player_1 > player_2;
+}
+
+bool compareBy_Assists(const Player &player1, const Player &player2, const char *teamName) {
+    int player_1 = 0;
+    int player_2 = 0;
+    auto teamStatNode1 = player1.statList->head;
+    while (teamStatNode1 != nullptr) {
+        if (*teamStatNode1->data.teamName == teamName) {
+            player_1 = teamStatNode1->data.assists;
+            break;
+        }
+        teamStatNode1=teamStatNode1->next;
+    }
+    auto teamStatNode2 = player2.statList->head;
+    while (teamStatNode2 != nullptr) {
+        if (*teamStatNode2->data.teamName == teamName) {
+            player_2 = teamStatNode2->data.assists;
+            break;
+        }
+        teamStatNode2=teamStatNode2->next;
+    }
+    return player_1 > player_2;
+}
+
+void sortPlayersByTeamName(
+        PlayerList *playerList,
+        const char* teamName,
+        bool (*compare)(const Player &player1, const Player &player2, const char *teamName)){
+
+    if (!playerList || !playerList->head || !compare)
+        return;
+
+    PlayerNode *current = playerList->head;
+    while (current != nullptr) {
+        PlayerNode *nextNode = current->next;
+        while (nextNode != nullptr) {
+            if (compare(nextNode->data, current->data,teamName)) {
+                swapPlayerNode(current, nextNode);
+            }
+            nextNode = nextNode->next;
+        }
+        current = current->next;
+    }
+
+}
+
 //4 учетные карточки на каждого игрока команды, упорядоченные (отдельно) по общему числу игр, голов и голевых передач за команду
-void printPlayerCardsByTeam(PlayerList *playerList, StringList *teamNameList,int choice) {
+// Предполагается, что PlayerList, StringList, PlayerNode и другие структуры данных уже определены
+
+void sortPlayersByChoice(PlayerList* playerList, const char* teamName, int choice) {
+    switch (choice) {
+        case 1:
+            sortPlayersByTeamName(playerList, teamName, compareBy_PlayedMatches);
+            break;
+        case 2:
+            sortPlayersByTeamName(playerList, teamName, compareBy_GoalsScored);
+            break;
+        case 3:
+            sortPlayersByTeamName(playerList, teamName, compareBy_GoalsConceded);
+            break;
+        case 4:
+            sortPlayersByTeamName(playerList, teamName, compareBy_Assists);
+            break;
+        case 5:
+            break;
+        default:
+            std::cerr << "Wrong choice. Try again" << std::endl;
+            break;
+    }
+}
+
+void printPlayerStats(std::ofstream& outputFile, PlayerNode* current, const char *teamName, int nameWidth, int size) {
+    while (current != nullptr) {
+        if (playedInTeam(current->data, teamName)) {
+            auto teamStatNode = current->data.statList->head;
+            while (teamStatNode != nullptr) {
+                if (*teamStatNode->data.teamName == teamName) {
+                    outputFile << std::left << std::setw(nameWidth) << *(current->data.name)
+                               << std::setw(size) << teamStatNode->data.playedMatches
+                               << std::setw(size) << teamStatNode->data.goalsScored
+                               << std::setw(size) << teamStatNode->data.goalsConceded
+                               << std::setw(size) << teamStatNode->data.assists << std::endl;
+                }
+                teamStatNode = teamStatNode->next;
+            }
+        }
+        current = current->next;
+    }
+}
+
+void printPlayerCardsByTeam(PlayerList* playerList, StringList* teamNameList, int choice) {
     if (!playerList || !playerList->head) {
         std::cerr << "Player list is empty!" << std::endl;
         return;
@@ -273,31 +426,9 @@ void printPlayerCardsByTeam(PlayerList *playerList, StringList *teamNameList,int
     int nameWidth = 35;
     int size = 15;
 
-    // Сортировка игроков
-    switch (choice) {
-        case 1:
-            sortPlayers(playerList, compareByPlayedMatches);
-            break;
-        case 2:
-            sortPlayers(playerList, compareByGoalsScored);
-            break;
-        case 3:
-            sortPlayers(playerList, compareByGoalsConceded);
-            break;
-        case 4:
-            sortPlayers(playerList, compareByAssists);
-            break;
-        case 5:
-            break;
-        default:
-            std::cout << "Wrong choice. Try again" << std::endl;
-            break;
-    }
-
     auto teamNameNode = teamNameList->head;
     while (teamNameNode != nullptr) {
         // Вывод учетных карточек игроков по команде
-
         outputFile << "Player Cards for Team: " << teamNameNode->data << std::endl;
         outputFile << std::left << std::setw(nameWidth) << "Player"
                    << std::setw(size) << "Matches"
@@ -305,20 +436,14 @@ void printPlayerCardsByTeam(PlayerList *playerList, StringList *teamNameList,int
                    << std::setw(size) << "GoalsConceded"
                    << std::setw(size) << "Assists" << std::endl;
 
+        sortPlayersByChoice(playerList, teamNameNode->data, choice);
 
-        PlayerNode *current = playerList->head;
-        while (current != nullptr) {
-            if (playedInTeam(current->data, teamNameNode->data)) {
-                outputFile << std::left << std::setw(nameWidth) << *(current->data.name)
-                           << std::setw(size) << current->data.commonPlayedMatches
-                           << std::setw(size) << current->data.commonGoalsScored
-                           << std::setw(size) << current->data.commonGoalsConceded
-                           << std::setw(size) << current->data.commonAssists << std::endl;
-            }
-            current = current->next;
-        }
+        PlayerNode* current = playerList->head;
+        printPlayerStats(outputFile, current, teamNameNode->data, nameWidth, size);
+
         teamNameNode = teamNameNode->next;
         outputFile << "--------------------------------------" << std::endl;
     }
+
     outputFile.close();
 }
